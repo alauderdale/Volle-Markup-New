@@ -1,0 +1,18 @@
+.invoice-list{
+	.row{
+		.paid{
+			i{
+				color: $success-color;
+			}
+		}
+		.unpaid{
+			i{
+				color: $danger-color;
+			}
+		}
+		i{
+			font-size: 12px;
+		}
+
+	}
+}

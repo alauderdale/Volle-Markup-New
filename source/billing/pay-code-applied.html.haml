@@ -1,0 +1,149 @@
+;;;
+
+"layout": "full-screen"
+
+;;;
+
+%section
+	.container
+		.row.justify-content-center
+			.col-lg-5
+				%h1
+					Confirm your subscription
+				%p
+					Enter payment details to subscribe
+				%form
+					.form-row
+						%label
+							Promo code
+					.form-row
+						.col-9
+							%input.form-control{:type=>"text"}
+						.col-3
+							%a.btn.btn-secondary.btn-block{:href=>"", :style=>"padding:8px;"}
+								Apply
+							
+				.double-margin-top.double-margin-bottom
+					.chip.full-width.promo-code-chip
+						Applied: 
+						%span.bold-font
+							1MONTHFREE - 100% OFF
+						%a.close{:href=>"/billing/pay"}
+							.material-icons.align-middle
+								clear
+						
+				%form
+					.form-row
+						.form-group.col-12
+							%label
+								Credit card number
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"0000 0000 0000 0000"}
+					.form-row.margin-bottom
+						.form-group.col-6
+							%label
+								Expiration
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"MM/YY"}
+						.form-group.col-6
+							%label
+								Security code
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"123"}
+					.form-row.margin-bottom
+						.form-group.col-12
+							%img.max-width{:src=>"../images/cards.png",:width=>"330px"}
+					.form-row
+						.form-group.col-12
+							%button.btn.btn-block.btn-primary.btn-lg{:type=>"submit"}
+								Upgrade now
+					.text-center
+						%h4.align-middle
+							%i.material-icons.align-middle{:style=>"font-size:23px;"}
+								lock
+							
+							Guaranteed 
+							%span.medium-font
+								safe and secure 
+							checkout
+							%img.align-middle{:src=>"../images/powered-by-stripe.svg", :width=>"100px"}
+
+					%hr
+					.double-margin-bottom
+						%p
+							"Volley is without doubt the biggest timesaver I have come across in a very long time. It literally takes seconds to create a note that includes both a screenshot of the problem and a written description."
+						.media
+							%img{:src=>"/images/avatar-mathias.png", :width=>"47px"}
+							.media-body.half-margin-left
+								%h4.no-margin-bottom
+									%span.bold-font
+										Mathias Hoffmann
+									%span.light-text-color
+										CTO
+								%img{:src=>"/images/denti-logo.png", :width=>"70px"}
+			.col-lg-5
+				.padded
+					.card.price-card.margin-auto{:style=>"min-height:auto;"}
+						.card-header.pro-header{:style=>"border-top-color:#FFAA00;"}
+							%h1.medium-font
+								Volley Pro
+							%h4
+								Total per month
+							%h1.display-5.inline
+								%span.price.bold-font
+									$
+								%span.bold-font.dollar-ammount
+									0
+							%p.bold-font.no-margin-bottom.quarter-margin-top
+								Then $25/month after 1 month
+
+								
+						.card-body
+							%ul.card-list.list-unstyled.icon-list-better.check-list
+								%li
+									%span.bold-font
+										Unlimited 
+									notes
+								%li
+									%span.bold-font
+										Unlimited
+									projects
+								%li
+									%span.bold-font
+										Priority 
+									support
+								%li
+									%span.bold-font
+										Export 
+									to Trello & Jira
+								%li
+									%span.bold-font
+										Team
+									workspaces
+								%li
+									%span.bold-font
+										4
+									team members
+									%i.material-icons.cursor-pointer{"data-toggle"=>"tooltip", :title=>"Team members can create and join projects within shared team workspaces. It is posible to add members to multiple workspaces."}
+										info
+								
+								
+
+								%hr.half-margin-bottom
+								%li
+									%span.bold-font
+										Draw
+									tools
+								%li
+									%span.bold-font
+										Unlimited 
+									collaborators
+									%i.material-icons.cursor-pointer{"data-toggle"=>"tooltip", :title=>"Collaborators are invited into a single project. Collaborators can create and respond to feedback within a project."}
+										info
+								%li
+									%span.bold-font
+										@ 
+									mentions 
+					.double-margin-top.padded.no-padding-top
+						%h4.light-text-color
+							Your new subscription will begin immediately. Any previous payments you made will be credited towards your new plan. The amount you owe today is the difference in price between your old plan and your new plan, for the remainder of the billing period. Each year you will be charged at a rate of $204/yr until you cancel your subscription.
+
+
+

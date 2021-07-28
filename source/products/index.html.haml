@@ -1,0 +1,182 @@
+;;;
+
+"title": "All projects"
+
+;;;
+
+
+
+/ = partial "free-trial-card"
+
+= partial "add-new"
+%section.padding-top.no-padding-bottom
+	.container.product-card-container
+		=partial "search_sort" 
+
+%section
+	.container.product-card-container
+		.row
+			-1.times do
+				.col-sm-12.col-md-12.col-lg-6
+					.product-card-wrapper
+						%a.card.product-card{:href=>"/product/review"}
+							.card-header.no-padding-bottom
+								.thumbnail-wrapper
+									.thumbnail{:style=>"background-image:url('/images/tmp/ceb-shot.png');"}
+							.card-body
+								.row
+									.col-8
+										/ %h3.no-margin-bottom.card-title.medium-font
+										/ 	Project title
+										%h3.card-url.no-margin-bottom
+											Bootstrap
+										%h4.card-text
+											Created Oct 17, 2019
+											%span.text-danger.quarter-margin-left.new-items
+												%i.material-icons
+													fiber_manual_record
+												3 new
+									.col-4
+						.card-actions
+							.dropdown.text-right
+								%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+									%i.material-icons
+										more_horiz
+								.dropdown-menu.dropdown-menu-right
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#editModal"} 
+										Edit
+									%button.dropdown-item{:type=>"button"} 
+										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
+										Archive
+									.dropdown-divider
+									%button.dropdown-item{:type=>"button", :onclick=>"location.href='/products/zero';"} 
+										Delete
+			-1.times do
+				.col-sm-12.col-md-12.col-lg-6
+					.product-card-wrapper
+						%a.card.product-card{:href=>"/product/review-zero"}
+							.card-header
+								.thumbnail-wrapper
+									.thumbnail{:style=>"background-image:url('/images/default-thumbnail.png');"}
+								/ .thumbnail-wrapper.no-thumbnail
+								/ 	.no-img
+								/ 		%p
+								/ 			A
+								/ 	.thumbnail
+							.card-body
+								.row
+									.col-8
+										/ %h3.no-margin-bottom.card-title.medium-font
+										/ 	Project title
+										%h3.card-url.no-margin-bottom
+											Empty project
+										%h4.card-text
+											Created Oct 17, 2019
+									.col-4
+						.card-actions
+							.dropdown.text-right
+								%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+									%i.material-icons
+										more_horiz
+								.dropdown-menu.dropdown-menu-right
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#editModal"} 
+										Edit
+									%button.dropdown-item{:type=>"button"} 
+										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
+										Archive
+									.dropdown-divider
+									%button.dropdown-item{:type=>"button", :onclick=>"location.href='products/zero';"} 
+										Delete
+			-1.times do
+				.col-sm-12.col-md-12.col-lg-6
+					.product-card-wrapper.margin-bottom
+						%a.card.product-card{:href=>"/product/unavailable"}
+							.card-header.no-padding-bottom
+								.thumbnail-wrapper
+									.thumbnail{:style=>"background-image:url('/images/tmp/demo-shot-2.png');"}
+							.card-body
+								.row
+									.col-8
+										/ %h3.no-margin-bottom.card-title.medium-font
+										/ 	Project title
+										%h3.card-url.no-margin-bottom
+											Unavailable project
+										%h4.card-text
+											Created Oct 17, 2019
+									.col-4
+						.card-actions
+							.dropdown.text-right
+								%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+									%i.material-icons
+										more_horiz
+								.dropdown-menu.dropdown-menu-right
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#editModal"} 
+										Edit
+									%button.dropdown-item{:type=>"button"} 
+										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
+										Archive
+									.dropdown-divider
+									%button.dropdown-item{:type=>"button", :onclick=>"location.href='products/zero';"} 
+										Delete
+			
+											
+
+
+
+#editModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Edit this project
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.margin-bottom
+						%label
+							Title
+						%form
+							.margin-bottom
+								%input.form-control.form-control-lg{:type=>"text", :value=>"Project title"}
+					%label
+						Thumbnail image
+					.media
+						%img.half-margin-right{:src=>"/images/tmp/ceb-shot.png", :width=>"200px"}
+						.media-body
+							%a.btn.btn-secondary{:href=>"#", :style=>"margin-top:24px;"}
+								Change image
+
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
+					Save
+
+
+
+
+#archiveModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Confirm archive project
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					%p
+						Are you sure you want to continue? No one will be able to view notes in this project.
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel, don't archive
+				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
+					Yes, archive
+
+					

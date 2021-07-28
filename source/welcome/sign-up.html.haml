@@ -1,0 +1,63 @@
+;;;
+
+"layout": "welcome"
+
+;;;
+
+.welcome-container
+	.form-container
+		.form-header
+			%a.close{:href=>"/"}
+				%i.material-icons
+					close
+		.form-content-wrapper
+			.form-content
+				%img.double-margin-bottom{:src=>"/images/logo.svg",  :width=>"120px"}
+				%h2
+					Get started now
+				%p.light-text-color
+					Filling the gap between design and development
+				%form
+					.margin-bottom
+						%h4.bold-font
+							Name
+						%input.form-control.form-control-lg{:type=>"text", :placeholder=>"John Doe"}
+					.margin-bottom
+						%h4.bold-font
+							Email
+						%input.form-control.form-control-lg{:type=>"text", :placeholder=>"john@doe.com"}
+					.margin-bottom
+						%h4.bold-font
+							What best describes you?
+						%select.form-control.form-control-lg
+							%option{:disabled => "disabled", :selected => "true", :value => ""} 
+								Choose a role
+							%option{:value => "project-manager"} Project / Product Manager
+							%option{:value => "account-manager"} Account Manager
+							%option{:value => "designer"} Designer
+							%option{:value => "engineer"} Engineer / Developer
+							%option{:value => "qatester"} QA Tester
+							%option{:value => "operations-it"} Operations &amp; IT
+							%option{:value => "customer-support"} Customer Support
+							%option{:value => "marketing-sales"} Marketing &amp; Sales
+							%option{:value => "entrepreneur"} Entrepreneur
+							%option{:value => "student"} Student
+							%option{:value => "other"} Other
+					.margin-bottom
+						%h4.bold-font
+							Password
+						%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Min 6 chars."}
+					%h5.light-text-color
+						I agree to the
+						%a.light-text-color{:href=>"/welcome/login"}
+							%u
+								Terms and privacy
+					.double-margin-top
+						%a.btn.btn-primary.btn-lg.btn-block{:href=>"/products/zero"}
+							Create account
+				.double-margin-top
+					%p
+						Have an account?
+						%a{:href=>"/welcome/login"}
+							Log in
+	

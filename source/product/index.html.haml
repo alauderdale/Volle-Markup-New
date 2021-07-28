@@ -1,0 +1,27 @@
+;;;
+
+"layout": "product"
+
+;;;
+
+:javascript
+	$(document).ready(function(){
+		$( ".comment" ).addClass( "active" );
+	});
+
+///remove this
+%div{:style=>"position:absolute; left:10px; top:10px; width:20px; height:20px; content:''; background:black; display:block; z-index:99;", :onclick=>"location.href='/product/captured-screenshot'"}
+
+.web-view-container.comment-mode
+	.iframe-wrapper
+		.iframe-border
+			.overlay-container
+				.overlay-wrapper
+				.overlay-border
+				.overlay-helper
+					.overlay-helper-inner
+						%p.text-center.bold-font
+							Select an element on the page
+			%iframe{:src=>"https://getbootstrap.com/docs/4.0/components/tooltips/"}
+				%p
+					No good

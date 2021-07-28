@@ -1,0 +1,291 @@
+.simple-prepend{
+  .input-group-prepend, .form-control, .input-group-text {
+    border:none;
+    background-color:transparent;
+  }
+  .input-group-text{
+    padding-left:0;
+    padding-right:0;
+    color:$light-gray-color;
+  }
+}
+
+
+.form-control{
+  border-radius: $base-border-radius;
+	&.form-control-lg{
+		font-size:16px;
+		padding-top:.65rem;
+		padding-bottom:.65rem;
+	}
+	&:focus{
+		box-shadow:none;
+		border-color:$link-color;
+	}
+}
+
+
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $light-text-color;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $light-text-color;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: $light-text-color;
+}
+
+
+//chips
+
+.chip {
+  display: inline-block;
+  padding: 0 16px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  border-radius: 25px;
+  background-color: tint($link-color,90%);
+  color: $link-color;
+  .close{
+  	position:relative;
+  	left:8px;
+  	i{
+	  	line-height: 32px;
+	  	font-size: 24px;
+	  	color: $link-color;
+  	}
+  }
+  &.promo-code-chip{
+    border:1px solid $link-color;
+    background:white;
+    color:$text-color;
+    height:44px;
+    line-height: 40px;
+    border-radius: 100px;
+    .close{
+      line-height: 40px;
+      i{
+
+      }
+    }
+  }
+}
+
+//appends
+
+.input-group{
+   .input-group-append{ 
+      .input-group-text{
+        background-color: white; 
+      }
+    }
+}
+
+
+
+//special checkboxes and radios
+
+.custom-radio{
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $text-color;
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $link-color;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+
+}
+
+
+
+.custom-checkbox{
+
+  [type="checkbox"]:checked,
+  [type="checkbox"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="checkbox"]:checked + label,
+  [type="checkbox"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+  }
+  [type="checkbox"]:checked + label:before,
+  [type="checkbox"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $text-color;
+      border-radius: 4px;
+      background: #fff;
+  }
+  [type="checkbox"]:checked + label:after,
+  [type="checkbox"]:not(:checked) + label:after {
+    width: 16px;
+    height: 16px;
+    background: #0042FF;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 1px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 16px;
+    font-family: 'Material Icons';
+    content: 'check';
+    color: white;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+
+
+  }
+  [type="checkbox"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="checkbox"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+
+
+}
+
+
+//switches
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $success-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+

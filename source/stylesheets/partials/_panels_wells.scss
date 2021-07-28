@@ -1,0 +1,37 @@
+.panel{
+	border:1px solid $link-color;
+	border-radius: $base-border-radius;
+	background: tint($link-color,95%);
+	.panel-body{
+		padding:20px;
+		@include breakpoint(md) {
+			padding:16px;
+		}
+	}
+	&.panel-gray{
+		border:none;
+		background:$off-white-dark-color;
+	}
+}
+
+.lifetime-redeem-panel{
+	min-height: 305px;
+	@include breakpoint(sm) {
+		min-height: auto;
+	}
+}
+
+.code-panel{
+	border-radius: $base-border-radius;
+	background: tint($border-color,80%);
+	border:1px solid $border-color;
+	.panel-body{
+		padding:20px;
+		@include breakpoint(md) {
+			padding:16px;
+		}
+		code{
+			color:$light-text-color;
+		}
+	}
+}

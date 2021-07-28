@@ -1,0 +1,137 @@
+;;;
+
+"layout": "product"
+
+;;;
+
+
+
+
+:css
+	body{
+		padding-top:0!important;
+	}
+
+
+/ .toast-container{"aria-atomic" => "true", "aria-live" => "polite"}
+/ 	.toast-container-inner
+/ 		.toast{:style => "opacity:1;"}
+/ 			.toast-body
+/ 				%p
+/ 					I'm a toast
+/ 		.toast{:style => "opacity:1;"}
+/ 			.toast-body
+/ 				%p
+/ 					Just in case we need to stack, im a second toast that breaks to a couple lines.
+
+.review-container
+	.notes-list-container
+		.notes-list-body
+			.notes-list-header.padded.half-padding-bottom
+				.inline-block
+					%h4.bold-font
+						0 Notes
+				.inline-block.align-middle.show-notes-toggle.float-right
+					%a{:href=>"#"}
+						%i.material-icons
+							clear
+			.notes-zero
+				.text-center.zero-notes-container
+					%img.margin-auto{:src=>"../images/comment.svg", :width=>"150px"}
+					%h4.light-text-color.margin-top
+						There are no open notes to display for this project.
+
+
+
+
+			.notes-list-footer
+				.show-resolved.check-btn
+					%button.no-margin-bottom.btn-link.btn{:type=>"button"}
+						%i.material-icons
+							check_box
+						Show completed
+
+	.note-container
+		.note-body
+			.note-nav.border-bottom
+				.container-fluid
+					.row
+						.col-8
+							.inline-block.align-middle.show-notes-toggle.menu-button
+								%a.btn.btn-secondary{:href=>"#"}
+									%i.material-icons
+										menu
+
+						.col-4
+			.note-info
+				.note-zero
+					%img.margin-auto.d-none.d-sm-block.double-margin-bottom{:src=>"../images/smile.svg", :width=>"90px"}
+					.note-zero-text
+						%h2.text-center.medium-font
+							Start your project. Here’s how.
+						.card-deck.double-margin-top.get-started-deck
+							.card
+								.card-body
+									%h3.card-title.medium-font
+										Install the browser extension
+									%p.card-text
+										Install the Chrome extension to capture notes on any website.
+								.card-footer
+									%a.btn.btn-primary.btn-block{:href=>"#"}
+										%img{:src=>"/images/chrome-icon.svg", :width=>"16px", :style=>"position:relative; top:-1px; margin-right:3px;"}
+										Show Chrome extension
+							.card
+								.card-body
+									%h3.card-title.medium-font
+										Invite your colleagues
+									%p.card-text
+										Invite anyone that will be reviewing your feedback.
+								.card-footer
+									%a.btn.btn-primary.btn-block{:href=>"#"}
+										Invite now
+							.card
+								.card-body
+									%h3.card-title.medium-font
+										Visit your website
+									%p.card-text
+										Open the extension and select this project. your notes will show up here.
+								.card-footer.text-center
+									%img.max-width.margin-auto{:src=>"/images/your-website.svg", :width=>"201px", :style=>"position:relative; top:6px;"}
+
+
+
+		
+							
+
+
+
+#guestModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header.no-border-bottom.no-padding-bottom
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.text-center
+						%img.margin-auto.double-margin-bottom{:src=>"/images/logo.svg", :width=>"150px"}
+					%p.text-center.double-margin-bottom
+						Before leaving a comment, please login as a guest
+					%form
+						.margin-bottom
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Full name"}
+						.margin-bottom
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Email"}
+						.double-margin-top
+							%a.btn.btn-primary.btn-lg.btn-block{:href=>"/products/zero"}
+								Continue
+					.double-margin-top.text-center
+						%a{:href=>"/welcome/sign-up"}
+							Have an account?
+
+			.modal-footer.no-border-top
+				
+				
+
+
+				

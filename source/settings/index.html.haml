@@ -1,0 +1,68 @@
+%section
+	.container
+		.row.justify-content-center
+			.col-xl-10
+				= partial("shared/page_header", :locals => { :title => "Good morning, John!" })
+				%nav.nav.double-margin-bottom.primary-tabs
+					%a.nav-link.active{:href=>"/settings/"}
+						Prifile
+					%a.nav-link{:href=>"/settings/password"}
+						Password
+					%a.nav-link{:href=>"/settings/notifications"}
+						Notifications
+					%a.nav-link{:href=>"/settings/billing-default"}
+						Subbscription
+					%a.nav-link{:href=>"/settings/appsumo"}
+						AppSumo
+
+
+				.card
+					.card-body
+						%h4.bold-font
+							Avatar
+						.media
+							.avatar.avatar-xl.margin-right
+								AL
+							.media-body
+								%a.btn.btn-secondary{:href=>"#", :style=>"margin-top:24px;"}
+									Change avatar
+						.margin-top
+						%form
+							.margin-bottom
+								%h4.bold-font
+									Name
+								%input.form-control.form-control-lg{:type=>"text", :value=>"John Doe"}
+							.margin-bottom
+								%h4.bold-font
+									Email
+								%input.form-control.form-control-lg{:type=>"text", :value=>"John@doe.com"}
+							%button.btn.btn-primary.btn-lg{:type=>"submit"}
+								Save
+				.double-margin-top
+					%button.btn.btn-secondary{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#deleteModal"} 
+						Delete account
+
+
+
+#deleteModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Delete account?
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					%p
+						This will instantly delete your Volley account, including all your comments, notes and projects. This cannot be undone.
+					%form
+						.margin-bottom
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Type 'delete' to confirm"}
+
+			.modal-footer.no-border-top
+				%button.btn.btn-link.light-text-color{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-danger{:tyle=>"button", "data-dismiss" => "modal"}
+					Yes, delete my account

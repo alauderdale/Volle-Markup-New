@@ -1,0 +1,119 @@
+;;;
+
+"layout": "blank"
+
+;;;
+
+
+%nav.navbar.navbar-light.bg-light.fixed-top.navbar-expand-sm.border-bottom
+	.container-fluid
+		.navbar-nav.mr-auto
+		%div
+			.navbar-nav
+				.nav-item
+					%a.nav-link.primary-text-color{:href => "/product/review"}
+						%i.material-icons
+							close
+
+%section
+	.container
+		.row.align-items-center.justify-content-center
+			.col-md-9
+				%h2.double-margin-bottom
+					Project settings
+				%nav.nav.primary-tabs
+					%a.nav-link.active{:href=>"/product/settings"}
+						General
+					%a.nav-link{:href=>"/product/settings/widget"}
+						Widget
+				%hr.no-margin
+				.settings-container.double-margin-top
+					.settings-section.double-margin-bottom
+						%h3.margin-bottom.medium-font
+							Project info
+						%form
+							.margin-bottom
+								%h4.medium-font
+									Title
+								%input.form-control.form-control-lg{:type=>"text", :value=>"NuAge Website"}
+					.settings-section.double-margin-bottom.double-padding-bottom
+						%h4.medium-font
+							Thumbnail image
+						.media
+							%img.half-margin-right{:src=>"/images/tmp/ceb-shot.png", :width=>"200px"}
+							.media-body
+								%a.btn.btn-secondary{:href=>"#", :style=>"margin-top:24px;"}
+									Change image
+					
+					.settings-section.double-margin-bottom.double-padding-bottom
+						%h3.margin-bottom.medium-font
+							Who can view this project?
+						%form
+							.form-check.custom-radio.no-padding-left
+								%input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1",:checked=>"checked"}
+									%label.form-check-label{:for => "inlineRadio1"} 
+										%p.half-margin-bottom
+											Only people invited into the project
+							.form-check.custom-radio.no-padding-left
+								%input#inlineRadio2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}
+									%label.form-check-label{:for => "inlineRadio2"} 
+										%p.no-margin
+											Anyone with the link
+					.settings-section.double-margin-bottom.double-padding-bottom
+						%h3.margin-bottom.medium-font
+							Advanced options
+						%form
+							%h4.medium-font.d-inline.align-middle
+								Also send notes to Trello or Jira
+							.d-inline
+								%span
+									%label.switch.margin-left
+										%input{:type => "checkbox", :checked=>"checked"}
+										%span.slider.round
+						.row
+							.col-12.col-md-7
+								.dropdown.margin-top
+									%button.btn.btn-secondary.text-left.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+										.d-inline
+											%img.quarter-margin-right{:src=>"../images/trello-icon.png", :width=>"20px"}
+										.d-inline
+											Trello
+										.d-inline.float-right
+											%i.material-icons
+												expand_more
+									.dropdown-menu.full-width
+										%button.dropdown-item.active{:type=>"button"} 
+											%img.quarter-margin-right{:src=>"../images/trello-icon.png", :width=>"20px"}
+											Trello
+										%button.dropdown-item{:type=>"button"} 
+											%img.quarter-margin-right{:src=>"../images/jira-icon.png", :width=>"20px"}
+											Jira
+								.dropdown.half-margin-top
+									%button.btn.btn-secondary.text-left.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+										.d-inline
+											Name of board
+										.d-inline.float-right
+											%i.material-icons
+												expand_more
+									.dropdown-menu.full-width
+										%button.dropdown-item.active{:type=>"button"} 
+											Name of board
+										%button.dropdown-item{:type=>"button"} 
+											Another board
+								.dropdown.half-margin-top
+									%button.btn.btn-secondary.text-left.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+										.d-inline
+											Name of lane
+										.d-inline.float-right
+											%i.material-icons
+												expand_more
+									.dropdown-menu.full-width
+										%button.dropdown-item.active{:type=>"button"} 
+											Name of lane
+										%button.dropdown-item{:type=>"button"} 
+											Another lane
+					%hr
+					.text-right
+						%button.btn.btn-primary.btn-lg{:tyle=>"button", "data-dismiss" => "modal"}
+							Save changes
+

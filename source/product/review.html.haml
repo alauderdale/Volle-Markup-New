@@ -1,0 +1,376 @@
+;;;
+
+"layout": "product"
+
+;;;
+
+
+:javascript
+	$(document).ready(function(){
+		$( ".review" ).addClass( "active" );
+		$( ".note-thumbnail:nth-child(2)" ).addClass( "active" );
+	});
+
+:css
+	body{
+		padding-top:0!important;
+	}
+
+
+.review-container
+	.notes-list-container
+		.notes-list-body.promo-active
+			.notes-list-header.padded
+				.inline
+					.inline-block.align-middle
+						%h4.bold-font.no-margin-bottom
+							21 Notes
+					.inline-block.align-middle.show-notes-toggle.float-right.margin-left
+						%a{:href=>"#"}
+							%i.material-icons.text-color{:style=>"font-size:14px; position:relative; top:3px;"}
+								clear
+							
+					.inline-block.align-middle.float-right
+						.dropdown.d-inline.half-margin-right
+							%button.btn.btn-default.no-padding.btn-sm-text.light-text-color.regular-font{:type=>"button", "data-toggle"=>"dropdown"}
+								Oldest 
+								%i.material-icons
+									expand_more
+							
+							.dropdown-menu
+								%a.dropdown-item{:href=>"#"}
+									Newest 
+								%a.dropdown-item.active{:href=>"#"}
+									Oldest 
+						.dropdown.d-inline
+							/ %button.btn.btn-secondary.btn-icon.filter-button{:type=>"button", "data-toggle"=>"dropdown"}
+							/ 	%span.light-text-color
+							/ 		.material-icons
+							/ 			filter_list
+							/ .dropdown-menu.dropdown-with-menu-nested{:style=>"min-width:250px;"}		
+							/ 	=partial"/product/filter-menu"
+
+							.btn-group
+								%button.btn.btn-secondary.btn-icon.filter-button.dropdown-action{:type=>"button", "data-toggle"=>"dropdown"}
+									%span.light-text-color
+										.material-icons
+											filter_list
+										1
+								.dropdown-menu.max-height-dropdown.prevent-dd-close-on-click{:style=>"min-width:250px;"}		
+									=partial"/product/filter-menu"
+								
+								%a.btn.btn-secondary.btn-icon.filter-button{:href=>"#"}
+									%span.light-text-color
+										.material-icons
+											clear
+								
+							
+
+				
+			
+
+
+
+			.note-thumbnail
+				.media
+					/ %img.margin-right{:src=>"/images/tmp/product-shot.png", :width=>"42px"}
+					.comment-number.comment-number-sm.margin-right
+						1
+					.media-body
+						%h5.bold-font.quarter-margin-bottom
+							=lorem.first_name
+							,
+							=lorem.first_name
+							%span.badge.badge-danger.quarter-margin-left
+								3
+						%h5
+							=lorem.words(10)
+						.note-status-preview
+							%i.material-icons-outlined{"data-toggle"=>"tooltip", :title=>"Needs review"}
+								remove_red_eye
+						
+
+			.note-thumbnail.resolved
+				.media
+					/ %img.margin-right{:src=>"/images/tmp/product-shot.png", :width=>"42px"}
+					.comment-number.comment-number-sm.margin-right
+						1
+					.media-body
+						%h5.bold-font.quarter-margin-bottom
+							=lorem.first_name
+							,
+							=lorem.first_name
+						%h5
+							=lorem.words(10)
+						.note-status-preview
+							%i.material-icons{"data-toggle"=>"tooltip", :title=>"Completed"}
+								check_box
+
+			- 30.times do
+				.note-thumbnail
+					.media
+						/ %img.margin-right{:src=>"/images/tmp/product-shot.png", :width=>"42px"}
+						.comment-number.comment-number-sm.margin-right
+							1
+						.media-body
+							%h5.bold-font.quarter-margin-bottom
+								=lorem.first_name
+								,
+								=lorem.first_name
+							%h5
+								=lorem.words(10)
+							.note-status-preview
+								%i.material-icons-outlined{"data-toggle"=>"tooltip", :title=>"To Do"}
+									crop_free
+
+
+
+
+			.notes-list-footer.notes-footer-upgrade-promo
+				.alert-container
+					.alert.alert-warning.no-margin
+						.text-center
+							%h5.bold-font.text-color
+								View all your notes
+							%h5.text-color{:style=>"font-size:12px;"}
+								To unlock unlimited notes, rather than just the first 50, upgrade to a paid plan.
+							%a.btn.btn-success.btn-sm{:href=>"/billing/trial-expired"}
+								See upgrade options
+							
+
+			.notes-list-footer
+				.show-resolved
+					.custom-checkbox.half-padding-top{:style=>"position:relative; left:2px;"}
+						%input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "checkbox", :value => "option1", :checked=>"checked"}
+							%label.form-check-label{:for => "inlineRadio1"} 
+								%h4.no-margin
+									Show completed
+
+	.note-container
+		.note-body
+			.note-nav.border-bottom
+				.container-fluid
+					.row.align-items-center
+						.col-8
+							.inline-block.show-notes-toggle.menu-button
+								%a.btn.btn-secondary{:href=>"#"}
+									%i.material-icons
+										menu
+							.inline-block
+								=partial"mark-resolved-btn"
+						.col-4
+							.dropdown.float-right{:style=>"position:relative;"}
+								
+								%a.btn.btn-secondary.float-right.btn-icon.inline{:href=>"/product/browse", "data-toggle"=>"dropdown"}
+									%i.material-icons
+										more_horiz
+								.dropdown-menu.dropdown-menu-right
+									%a.dropdown-item.delete-comment{ :href=>"/product/browse"} 
+										%i.material-icons-outlined.icon-left
+											launch
+										Go to page
+									.dropdown-divider
+									%button.dropdown-item.delete-comment.text-danger{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#confirmDeleteNoteModal"} 
+										%i.material-icons-outlined.icon-left
+											delete
+										Delete note
+									
+
+			.note-info
+				.img-container
+					.img-wrapper
+						.img-comment-container
+							.comment-number{:style=>"position: absolute; right: 40px; top: 22px;"}
+								1
+							%img{:src=>"/images/tmp/screenshot.png", :width=>"800px"}
+							.half-margin-top.text-center.show-comment-toggle.d-lg-none.d-md-none
+								%a.btn.btn-link.btn-sm.light-text-color{:href=>"#"}
+									Show comments
+				.comments-container
+					.resolved-header
+						.padded
+							.row.align-items-center
+								.col-7
+									=partial"mark-resolved-btn"		
+								.col
+									.dropdown
+										%a.btn.btn-secondary.float-right.btn-icon.inline{:href=>"/product/browse", "data-toggle"=>"dropdown", :style=>"position:relative; left:4px;"}
+											%i.material-icons
+												more_horiz
+										.dropdown-menu.dropdown-menu-right
+											%a.dropdown-item.delete-comment{ :href=>"/product/browse"} 
+												%i.material-icons-outlined.icon-left
+													launch
+												Go to page
+											.dropdown-divider
+											%button.dropdown-item.delete-comment.text-danger{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#confirmDeleteNoteModal"} 
+												%i.material-icons-outlined.icon-left
+													delete
+												Delete note
+					.comments-wrapper
+						/ .comment-list-confirm-overlay.text-center.invisible.delete-this-convo
+						/ 	.confirm-items
+						/ 		%h5
+						/ 			Delete this 
+						/ 			%span.bold-font
+						/ 				entire 
+						/ 			note and all comments?
+						/ 		.inline-block.half-margin-top
+						/ 			%a.btn.btn-primary{:href=>"/product/review-zero"}
+						/ 				Yes, delete
+						/ 			%button.btn.btn-link{:type=>"button", :onclick=>"$('.comment-list-confirm-overlay').removeClass('visible').addClass('invisible');"} 
+						/ 				Cancel
+						.comment-list-confirm-overlay.text-center.invisible.delete-this-comment
+							.confirm-items
+								%h5
+									Delete 
+									%span.bold-font
+										this 
+									comment?
+								.inline-block.half-margin-top
+									%a.btn.btn-primary{:href=>"/product/review-zero"}
+										Yes, delete
+									%button.btn.btn-link{:type=>"button", :onclick=>"$('.comment-list-confirm-overlay').removeClass('visible').addClass('invisible');"} 
+										Cancel
+
+
+						.padded.text-right.no-padding-bottom.show-comment-toggle.d-sm-block.d-md-none.mobile-comments-header
+							%a{:href=>"#"}
+								%i.material-icons
+									close
+						.comments-list-container
+							.note-comment-container
+								.comment.note-comment
+									.media
+										.avatar.avatar-initial.avatar-xs.half-margin-right
+											JD
+										.media-body
+											.actions
+												.dropdown.text-right
+													%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+														%i.material-icons
+															more_horiz
+													.dropdown-menu.dropdown-menu-right
+														%button.dropdown-item{:type=>"button"} 
+															Edit note
+											%h4.bold-font.no-margin-bottom
+												=lorem.name
+											%h5.light-text-color
+												2m ago
+											%h4
+												I just want to see how this note will look with a very long note written in it .Notes often are not all that long but just wanting to make sure this area provides the best UX possible for prople.
+											/ %a{:href=>"#"}
+											/ 	%img{:src=>"/images/tmp/shot.png", :width=>"85px"}
+								.note-details-container
+									.note-details
+										%h4.medium-font
+											%a.collapsed.details-toggle{"data-toggle"=>"collapse", :href=>"#noteDetailsCollapse", :role=>"button", "aria-expanded"=>"false"}
+												%i.material-icons.align-middle
+													expand_more
+												Details
+												
+
+										#noteDetailsCollapse.note-details-items.collapse
+											%dl.row
+												%dt.col-sm-3
+													Browser
+												%dd.col-sm-9
+													Mac OS 10.14.0
+											%dl.row
+												%dt.col-sm-3
+													OS
+												%dd.col-sm-9
+													Chrome 71
+											%dl.row
+												%dt.col-sm-3
+													Viewport
+												%dd.col-sm-9
+													400x400
+											%dl.row
+												%dt.col-sm-3
+													URL
+												%dd.col-sm-9.truncated-url
+													https://app.productstash.io/superlongurldontyouknow
+
+							.new-comment
+								%textarea.form-control.full-width.quarter-margin-bottom.new-comment-field{:rows=>"1", :placeholder=>"Write a reply"}
+								%button.btn.btn-primary.btn-sm.float-right.add-comment-btn{:type=>"button"}
+									Comment
+								%button.btn.btn-flat.btn-icon.attachment.float-right.quarter-margin-right{:type=>"button", "data-toggle"=>"tooltip", :title=>"Attach a file"}
+									%i.material-icons
+										attachment
+
+
+							-20.times do
+								.comment
+									.media
+										.avatar.avatar-initial.avatar-xs.half-margin-right
+											JD
+										.media-body
+											.actions
+												.dropdown.text-right
+													%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+														%i.material-icons
+															more_horiz
+													.dropdown-menu.dropdown-menu-right
+														%button.dropdown-item{:type=>"button"} 
+															Edit
+														%button.dropdown-item.delete-comment{:type=>"button", :onclick=>"$('.delete-this-comment').addClass('visible').removeClass('invisible');"} 
+															Delete comment
+											%h4.bold-font.no-margin-bottom
+												=lorem.name
+											%h5.light-text-color
+												2m ago
+											%h4
+												=lorem.words(20)
+											%a{:href=>"#"}
+												%img{:src=>"/images/tmp/shot.png", :width=>"85px"}
+
+
+#guestModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header.no-border-bottom.no-padding-bottom
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.text-center
+						%img.margin-auto.double-margin-bottom{:src=>"/images/logo.svg", :width=>"150px"}
+					%p.text-center.double-margin-bottom
+						Before leaving a comment, please login as a guest
+					%form
+						.margin-bottom
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Full name"}
+						.margin-bottom
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Email"}
+						.double-margin-top
+							%a.btn.btn-primary.btn-lg.btn-block{:href=>"/products/zero"}
+								Continue
+					.double-margin-top.text-center
+						%a{:href=>"/welcome/sign-up"}
+							Have an account?
+
+			.modal-footer.no-border-top
+				
+				
+
+#confirmDeleteNoteModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Delete note
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					%p
+						Are you sure you want to delete this note? All comments and attachments will also be deleted.
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
+					Yes, delete
+				

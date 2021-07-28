@@ -1,0 +1,229 @@
+
+
+
+.navbar{
+		a.nav-link{
+			color:$text-color!important;
+			transition-duration:$base-transition-duration;
+			&:hover{
+				color:shade($text-color,90%)!important;
+			}
+		}
+	&.bg-light{
+		background-color:white!important;
+	}
+}
+
+
+
+//page header nav
+
+.page-header{
+	padding-top:$baseline;
+}
+
+.page-header-for-title{
+	padding-bottom:$baseline;
+	margin-bottom:$baseline;
+	border-bottom:1px solid $border-color;
+	.title{
+		margin-bottom:0;
+	}
+}
+
+
+// tabs
+
+.primary-tabs{
+	a.nav-link{
+		font-size: 16px;
+		padding:$baseline/4 0px;
+		margin: 0 12px;
+		border:none;
+		color: $gray-color;
+		&:first-of-type{
+			margin-left: 0;
+		}
+		&:hover{
+			color: $link-color;
+		}
+		&.active{
+			border-bottom:2px solid $link-color;
+			color: $link-color;
+		}
+	}
+}
+
+
+//dropdowns
+
+.mention-menu{
+	min-width: 280px;
+}
+
+
+
+//selection list
+
+.list-of-options{
+
+	.list-group-inner {
+	  position: relative;
+	}
+
+	.list-group{
+		&.disabled{
+			.list-group-item{
+				opacity: .7;
+				cursor: not-allowed !important;
+			}
+			input[type="checkbox"]:checked + .list-group-item:before,input[type="radio"]:checked + .list-group-item:before {
+				color:$lightest-gray-color;
+			}
+		}
+
+	}
+
+	.list-group-item {
+	  user-select: none;
+	  border-width: 1px;
+	  margin-bottom: 10px;
+	  transition-duration: .1s;
+	  border-color:$border-color;
+	  width:100%;
+	  border-radius:$base-border-radius;
+	    &:hover{
+	    	background-color: tint($link-color, 95%);
+	    }
+		&.select-all{
+			border:none;
+			&:hover{
+				background:transparent;
+			}
+		}
+	}
+
+
+	.list-group input[type="checkbox"]:checked + .select-all{
+		background:none!important;
+	}
+
+	.list-group{
+		width:100%;
+
+	}
+
+	.list-group input {
+	  &[type="checkbox"] {
+	    display: none;
+	    + .list-group-item {
+	      cursor: pointer;
+	      &:before {
+		    position: absolute;
+		    top: calc(50% - 14px);
+	    	left: 15px;
+		    z-index: 99;
+	        font-size: 30px;
+	        color:$lightest-gray-color;
+	        font-family: "Material Icons";
+	       	content: "radio_button_unchecked";
+	      }
+	    }
+	    &:checked + .list-group-item {
+	      background-color: tint($link-color, 95%);
+	      border-color:$link-color;
+	      &:before {
+	        color: $primary-color;
+	        content: "check_circle";
+	      }
+	    }
+	  }
+	  &[type="radio"] {
+	  	display: none;
+	    + .list-group-item {
+	      cursor: pointer;
+	      &:before {
+		    position: absolute;
+		    top: calc(50% - 14px);
+	    	left: 15px;
+		    z-index: 99;
+	        font-size: 30px;
+	        color:$lightest-gray-color;
+	        font-family: "Material Icons";
+	       	content: "radio_button_unchecked";
+	      }
+	    }
+	    &:checked + .list-group-item {
+	      background-color: tint($link-color, 95%);
+	      border-color:$link-color;
+	      &:before {
+	        color: $primary-color;
+	        content: "check_circle";
+	      }
+	    }
+	  }
+	}
+	&.style-checkbox{
+		.list-group input {
+		  &[type="checkbox"] {
+		  	+ .list-group-item {
+				&:before {
+					content: "check_box_outline_blank";
+					    transition: all 0.2s linear 0s;
+				}
+		    }
+		    &:checked + .list-group-item {
+		      &:before {
+		        content: "check_box";
+		      }
+		    }
+		  }
+		  &[type="radio"] {
+		    + .list-group-item {
+				&:before {
+					content: "check_box_outline_blank";
+					    transition: all 0.2s linear 0s;
+				}
+		    }
+		    &:checked + .list-group-item {
+		      &:before {
+		        content: "check_box";
+		      }
+		    }
+		  }
+		}
+	}
+	&.simple{
+		.list-group-item {
+			margin-bottom: 0px;
+			border:none;
+			padding:10px 0 10px 0;
+		    &:hover{
+		    	background-color: transparent;
+		    }
+		}
+		.list-group input {
+		  &[type="checkbox"] {
+		    + .list-group-item {
+		      &:before {
+		    	left: -5px;
+		      }
+		    }
+		    &:checked + .list-group-item {
+				background-color: transparent;
+		    }
+		  }
+		  &[type="radio"] {
+		    + .list-group-item {
+		      &:before {
+		    	left: -5px;
+		      }
+		    }
+		    &:checked + .list-group-item {
+		    	background-color: transparent;
+		    }
+		  }
+		}
+	}
+
+}

@@ -1,0 +1,234 @@
+%nav.navbar.navbar-light.bg-light.fixed-bottom#bottom-bar.no-padding
+  .container-fluid
+    .col
+      .d-inline-block
+        %a.navbar-brand.padding-bottom.padding-top{:href => "/products"}
+          .inline-block
+            %i.material-icons.light-text-color{:style=>"position:relative; top:3px; "}
+              keyboard_arrow_left
+      .d-inline-block.product-title
+        %p.no-margin-bottom.product-name
+          Project title with a really long name
+        %h6.product-date.no-margin-bottom
+          Created Oct 17, 2019
+    .col-6.col-sm-6.align-middle
+      .float-right
+        .avatars-list.half-margin-right.hidden-sm.d-none.d-md-inline-block
+          - 3.times do
+            .avatar.avatar-initial.avatar-xs.d-inline-block{"data-toggle"=>"tooltip", "data-placement"=>"top", :title=>"John Doe (you)"}
+              JD
+          .avatar.avatar-initial.avatar-xs.d-inline-block.primary-bg{"data-toggle"=>"modal", "data-target"=>"#shareModal"}
+            +4
+        %a.btn.btn-primary.share-button.d-inline-block{:href=>"#", "data-toggle"=>"modal", "data-target"=>"#shareModalGuest"}
+          Share
+        %a.btn.btn-secondary.share-button.d-inline-block{:href=>"#", "data-toggle"=>"modal", "data-target"=>"#exportModal"}
+          Export
+        %a.btn.btn-secondary.btn-icon.d-inline-block{:href=>"/product/settings"}
+          %i.material-icons-outlined
+            settings
+        
+
+
+
+
+
+#shareModalGuest.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header.no-border-bottom.no-padding-bottom
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .padded.no-padding-top.no-padding-bottom
+          %h2.text-center
+            Invite prople to this project
+          %p.light-text-color.text-center
+            Invite collaborators to work in this project
+          .double-margin-bottom
+            .position-relative
+              %input.input-lg.form-control.form-control-lg{:type=>"text", :autofocus=>"", :style=>"padding-left:170px; position:relative;"}
+                .chip{:style=>"position:absolute; top:7px; left:7px;"}
+                  john@doe.com
+                  .close
+                    %i.material-icons
+                      cancel
+          .text-center
+            %button.btn.btn-primary.btn-lg{:type => "button", "data-dismiss"=>"modal"} 
+              Send invite
+          .double-margin-top
+            %h5.light-text-color.margin-bottom
+              Who has access
+            .people-list
+              .media.half-margin-top.half-padding-top.half-padding-bottom
+                .avatar.avatar-initial.avatar-xs.half-margin-right
+                  JD
+                .media-body
+                  .row
+                    .col-md-8
+                      %h4.bold-font.no-margin-bottom
+                        =lorem.name
+                      %h5.light-font-name
+                        Owner •
+                        =lorem.email
+                    .col-md-4
+                      %button.btn.btn-secondary.btn-sm.disabled.btn-block.btn-label{:type=>"button", "data-toggle"=>"tooltip", :title=>"Owner can't be removed"}
+                        owner
+              .media.half-margin-top.half-padding-top.half-padding-bottom
+                .avatar.avatar-initial.avatar-xs.half-margin-right
+                  JD
+                .media-body
+                  .row
+                    .col-md-8
+                      %h4.bold-font.no-margin-bottom
+                        =lorem.name
+                      %h5.light-font-name
+                        Member •
+                        =lorem.email
+                    .col-md-4
+                      %button.btn.btn-secondary.btn-label.btn-sm.disabled.btn-block{:type=>"button", "data-toggle"=>"tooltip", :title=>"Team members can't be removed"}
+                        Team member
+
+              .media.half-margin-top.half-padding-top.half-padding-bottom
+                .avatar.avatar-initial.avatar-xs.half-margin-right
+                  JD
+                .media-body
+                  .row
+                    .col-md-8
+                      %h4.bold-font.no-margin-bottom
+                        =lorem.name
+                      %h5.light-font-name
+                        Collaborator •
+                        =lorem.email
+                    .col-md-4
+                      %button.btn.btn-secondary.btn-sm.btn-block
+                        Remove
+              .media.half-margin-top.half-padding-top.half-padding-bottom
+                .avatar.avatar-initial.avatar-xs.half-margin-right
+                  JD
+                .media-body
+                  .row
+                    .col-md-8
+                      %h4.bold-font.no-margin-bottom
+                        =lorem.name
+                      %h5.light-font-name
+                        Collaborator •
+                        =lorem.email
+                    .col-md-4
+                      %button.btn.btn-secondary.btn-sm.btn-block
+                        Leave project
+              .media.half-margin-top.half-padding-top.half-padding-bottom
+                .avatar.avatar-initial.avatar-xs.half-margin-right
+                  JD
+                .media-body
+                  .row
+                    .col-md-8
+                      %h4.bold-font.no-margin-bottom.extra-light-text-color
+                        =lorem.name
+                        (invited)
+                      %h5.light-font-name
+                        Invited •
+                        =lorem.email
+                    .col-md-4
+                      %button.btn.btn-secondary.btn-sm.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+                        •••
+                      .dropdown-menu.dropdown-menu-right
+                        %button.dropdown-item{:type=>"button"} 
+                          Resend invite
+                        %button.dropdown-item.delete-comment{:type=>"button", :onclick=>"$('.comment-list-confirm-overlay').addClass('visible').removeClass('invisible');"} 
+                          Remove
+      .modal-footer.no-border-top
+
+
+
+
+#exportModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header.no-border-bottom.no-padding-bottom
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .padded.no-padding-top
+          %h2.no-margin-bottom
+            Export Notes
+          .double-margin-top
+            %h5.bold-font
+              Active
+            .card.half-margin-bottom
+              .card-body
+                .row.align-items-center
+                  .col-5
+                    %img.max-width{:src=>"../images/trello-logo.png", :width=>"100px"}
+                  .col
+                    .float-right
+                      .dropdown
+                        %button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+                          %i.material-icons
+                            more_vert
+                        .dropdown-menu.dropdown-menu-right
+                          %button.dropdown-item{:type=>"button"} 
+                            Disconnect
+                        %a.btn.btn-primary{:href=>"/export"}
+                          Export
+          .double-margin-top
+            %h5.bold-font
+              Not configured
+            .card.half-margin-bottom
+              .card-body
+                .row.align-items-center
+                  .col
+                    %img{:src=>"../images/asana-logo.png", :width=>"100px"}
+                  .col
+                    .float-right
+                      %a.btn.btn-secondary{:href=>"#"}
+                        Configure
+            .card.half-margin-bottom
+              .card-body
+                .row.align-items-center
+                  .col
+                    %img{:src=>"../images/jira-software-logo.svg", :width=>"150px"}
+                  .col
+                    .float-right
+                      %a.btn.btn-secondary{:href=>"/export/jira/connect"}
+                        Configure
+
+          
+
+#exportModalLocked.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header.no-border-bottom.no-padding-bottom
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .padded.no-padding-top
+          %h2.no-margin-bottom
+            Export Notes
+          .double-margin-top
+            .card.half-margin-bottom
+              .card-body
+                .row.align-items-center
+                  .col-5
+                    %img.max-width{:src=>"../images/trello-logo.png", :width=>"100px"}
+                  .col
+                    .float-right
+                      %a.btn.btn-link{:href=>"/billing/trial-expired"}
+                        Upgrade to use
+          .double-margin-top
+            .card.half-margin-bottom
+              .card-body
+                .row.align-items-center
+                  .col
+                    %img{:src=>"../images/asana-logo.png", :width=>"100px"}
+                  .col
+                    .float-right
+                      %a.btn.btn-link{:href=>"/billing/trial-expired"}
+                        Upgrade to use
+
+     
+
+
+
+
+
+              
