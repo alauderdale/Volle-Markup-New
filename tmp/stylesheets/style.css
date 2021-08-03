@@ -969,7 +969,7 @@ input:checked + .slider:before {
   border-radius: 50%; }
 
 .password-requirement {
-  font-size: 11pt; }
+  font-size: 10pt; }
   .password-requirement:before {
     content: "";
     display: inline-block;
