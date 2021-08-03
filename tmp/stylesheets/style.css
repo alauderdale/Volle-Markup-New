@@ -2514,12 +2514,12 @@ h3.market {
       .welcome-container .form-container {
         width: 100%;
         max-width: 100%;
-        padding: 0 48px; } }
+        padding: 0 16px; } }
     .welcome-container .form-container .form-header {
       position: relative; }
       .welcome-container .form-container .form-header .close {
         position: absolute;
-        right: -32px;
+        right: 0;
         top: 16px;
         z-index: 99; }
       .welcome-container .form-container .form-header .back {

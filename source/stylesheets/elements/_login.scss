@@ -18,13 +18,13 @@
 		@include breakpoint(sm) {
 			width:100%;
 			max-width: 100%;
-			padding:0 $baseline*3;
+			padding:0 $baseline*1;
 		}
 		.form-header{
 			position:relative;
 			.close{
 				position: absolute;	
-				right:-$baseline*2;
+				right:0;
 				top:$baseline;
 				z-index: 99;		
 			}
