@@ -51,32 +51,59 @@ Email
 </h4>
 <input class='form-control form-control-lg' placeholder='john@doe.com' type='text'>
 </div>
+<!-- .margin-bottom -->
+<!-- %h4.bold-font -->
+<!-- What best describes you? -->
+<!-- %select.form-control.form-control-lg -->
+<!-- %option{:disabled => "disabled", :selected => "true", :value => ""} -->
+<!-- Choose a role -->
+<!-- %option{:value => "project-manager"} Project / Product Manager -->
+<!-- %option{:value => "account-manager"} Account Manager -->
+<!-- %option{:value => "designer"} Designer -->
+<!-- %option{:value => "engineer"} Engineer / Developer -->
+<!-- %option{:value => "qatester"} QA Tester -->
+<!-- %option{:value => "operations-it"} Operations &amp; IT -->
+<!-- %option{:value => "customer-support"} Customer Support -->
+<!-- %option{:value => "marketing-sales"} Marketing &amp; Sales -->
+<!-- %option{:value => "entrepreneur"} Entrepreneur -->
+<!-- %option{:value => "student"} Student -->
+<!-- %option{:value => "other"} Other -->
 <div class='margin-bottom'>
-<h4 class='bold-font'>
-What best describes you?
-</h4>
-<select class='form-control form-control-lg'>
-<option disabled='disabled' selected='true' value=''>
-Choose a role
-</option>
-<option value='project-manager'>Project / Product Manager</option>
-<option value='account-manager'>Account Manager</option>
-<option value='designer'>Designer</option>
-<option value='engineer'>Engineer / Developer</option>
-<option value='qatester'>QA Tester</option>
-<option value='operations-it'>Operations &amp; IT</option>
-<option value='customer-support'>Customer Support</option>
-<option value='marketing-sales'>Marketing &amp; Sales</option>
-<option value='entrepreneur'>Entrepreneur</option>
-<option value='student'>Student</option>
-<option value='other'>Other</option>
-</select>
-</div>
-<div class='margin-bottom'>
-<h4 class='bold-font'>
+<h4 class='bold-font d-inline align-baseline'>
 Password
 </h4>
+<h4 class='float-right d-inline'>
+<a class='btn link-color' href='#' style='font-size:14px; padding:0;'>
+<i class='material-icons-outlined'>
+remove_red_eye
+</i>
+Show
+</a>
+</h4>
 <input class='form-control form-control-lg' placeholder='Min 6 chars.' type='text'>
+</div>
+<div class='double-margin-bottom'>
+<div class='row'>
+<div class='col'>
+<div class='password-requirement completed'>
+One lowercase character
+</div>
+<div class='password-requirement'>
+One uppercase character
+</div>
+<div class='password-requirement'>
+One number
+</div>
+</div>
+<div class='col'>
+<div class='password-requirement'>
+One special character
+</div>
+<div class='password-requirement'>
+8 characters minimum
+</div>
+</div>
+</div>
 </div>
 <h5 class='light-text-color'>
 I agree to the

@@ -968,6 +968,21 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
+.password-requirement {
+  font-size: 11pt; }
+  .password-requirement:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background: #003be6; }
+  .password-requirement.completed {
+    color: #B4BBC6; }
+    .password-requirement.completed:before {
+      background: #B4BBC6; }
+
 .alert-promo {
   background-image: linear-gradient(270deg, #0013FF 0%, #CC00FF 100%);
   color: white;

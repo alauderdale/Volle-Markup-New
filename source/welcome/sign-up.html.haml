@@ -26,27 +26,46 @@
 						%h4.bold-font
 							Email
 						%input.form-control.form-control-lg{:type=>"text", :placeholder=>"john@doe.com"}
+					/ .margin-bottom
+					/ 	%h4.bold-font
+					/ 		What best describes you?
+					/ 	%select.form-control.form-control-lg
+					/ 		%option{:disabled => "disabled", :selected => "true", :value => ""} 
+					/ 			Choose a role
+					/ 		%option{:value => "project-manager"} Project / Product Manager
+					/ 		%option{:value => "account-manager"} Account Manager
+					/ 		%option{:value => "designer"} Designer
+					/ 		%option{:value => "engineer"} Engineer / Developer
+					/ 		%option{:value => "qatester"} QA Tester
+					/ 		%option{:value => "operations-it"} Operations &amp; IT
+					/ 		%option{:value => "customer-support"} Customer Support
+					/ 		%option{:value => "marketing-sales"} Marketing &amp; Sales
+					/ 		%option{:value => "entrepreneur"} Entrepreneur
+					/ 		%option{:value => "student"} Student
+					/ 		%option{:value => "other"} Other
 					.margin-bottom
-						%h4.bold-font
-							What best describes you?
-						%select.form-control.form-control-lg
-							%option{:disabled => "disabled", :selected => "true", :value => ""} 
-								Choose a role
-							%option{:value => "project-manager"} Project / Product Manager
-							%option{:value => "account-manager"} Account Manager
-							%option{:value => "designer"} Designer
-							%option{:value => "engineer"} Engineer / Developer
-							%option{:value => "qatester"} QA Tester
-							%option{:value => "operations-it"} Operations &amp; IT
-							%option{:value => "customer-support"} Customer Support
-							%option{:value => "marketing-sales"} Marketing &amp; Sales
-							%option{:value => "entrepreneur"} Entrepreneur
-							%option{:value => "student"} Student
-							%option{:value => "other"} Other
-					.margin-bottom
-						%h4.bold-font
+						%h4.bold-font.d-inline.align-baseline
 							Password
+						%h4.float-right.d-inline
+							%a.btn.link-color{:href=>"#", :style=>"font-size:14px; padding:0;"}
+								%i.material-icons-outlined
+									remove_red_eye
+								Show
 						%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Min 6 chars."}
+					.double-margin-bottom
+						.row
+							.col
+								.password-requirement.completed
+									One lowercase character 
+								.password-requirement
+									One uppercase character
+								.password-requirement
+									One number
+							.col
+								.password-requirement
+									One special character 
+								.password-requirement
+									8 characters minimum
 					%h5.light-text-color
 						I agree to the
 						%a.light-text-color{:href=>"/welcome/login"}
