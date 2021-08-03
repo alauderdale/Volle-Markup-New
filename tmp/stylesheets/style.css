@@ -2539,6 +2539,21 @@ h3.market {
       justify-content: center;
       width: 100%; }
 
+.password-requirement {
+  font-size: 10pt; }
+  .password-requirement:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background: #003be6; }
+  .password-requirement.completed {
+    color: #B4BBC6; }
+    .password-requirement.completed:before {
+      background: #B4BBC6; }
+
 .invoice-list .row .paid i {
   color: #26C164; }
 

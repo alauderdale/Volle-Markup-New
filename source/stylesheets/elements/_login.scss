@@ -50,3 +50,26 @@
 		}
 	}
 }
+
+
+
+// password indicator
+
+.password-requirement{
+  font-size: 10pt;
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background: shade($primary-color,10%);
+  }
+  &.completed{
+    color:$light-gray-color;
+    &:before{
+      background:$light-gray-color;
+    }
+  }
+}
