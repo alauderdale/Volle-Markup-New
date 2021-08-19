@@ -111,7 +111,7 @@ img {
 .attachment-grid {
   padding-left: 50px; }
 
-.attachment {
+.attachment-preview {
   position: relative;
   margin: 4px;
   padding: 8px;
@@ -122,16 +122,16 @@ img {
   border-radius: 8px;
   border: 1px solid #E6EAEE;
   color: white; }
-  .attachment:hover .title {
+  .attachment-preview:hover .title {
     color: white; }
-  .attachment:hover .remove {
+  .attachment-preview:hover .remove {
     display: block; }
-  .attachment .remove {
+  .attachment-preview .remove {
     position: absolute;
     top: -10px;
     right: -10px;
     display: none; }
-  .attachment .type {
+  .attachment-preview .type {
     position: absolute;
     bottom: 0px;
     left: 8px; }
