@@ -42,6 +42,10 @@
 									Newest 
 								%a.dropdown-item.active{:href=>"#"}
 									Oldest 
+								%a.dropdown-item{:href=>"#"}
+									Status 
+								%a.dropdown-item{:href=>"#"}
+									Priority 
 						.dropdown.d-inline
 							/ %button.btn.btn-secondary.btn-icon.filter-button{:type=>"button", "data-toggle"=>"dropdown"}
 							/ 	%span.light-text-color
@@ -353,35 +357,13 @@
 											%dt.col-5
 												%img.d-inline-block.align-middle{:src=>"/images/icon-attach.svg", :width=>"30px"}
 												%h4.bold-font.no-margin-bottom.d-inline-block.align-middle.half-margin-left
-													2 files
+													No files
 											%dd.col-7.text-right
 												%button.btn.btn-secondary.btn-icon.btn-circle{"data-toggle" => "dropdown", :type=>"button", :style=>"padding:3px 6px;"}
 													%i.material-icons{:style=>"font-size:12px!important;"}
 														add
 													
-												
-
-										#noteDetailsCollapse.note-details-items.collapse
-											%dl.row
-												%dt.col-sm-3
-													Browser
-												%dd.col-sm-9
-													Mac OS 10.14.0
-											%dl.row
-												%dt.col-sm-3
-													OS
-												%dd.col-sm-9
-													Chrome 71
-											%dl.row
-												%dt.col-sm-3
-													Viewport
-												%dd.col-sm-9
-													400x400
-											%dl.row
-												%dt.col-sm-3
-													URL
-												%dd.col-sm-9.truncated-url
-													https://app.productstash.io/superlongurldontyouknow
+											
 							.new-comment
 								%textarea.form-control.full-width.quarter-margin-bottom.new-comment-field{:rows=>"1", :placeholder=>"Write a reply"}
 								%button.btn.btn-primary.btn-sm.float-right.add-comment-btn{:type=>"button"}
