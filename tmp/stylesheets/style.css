@@ -108,6 +108,34 @@ img {
 .border-top, .border-bottom, .border-left, .border-right {
   border-color: #E6EAEE; }
 
+.attachment-grid {
+  padding-left: 50px; }
+
+.attachment {
+  position: relative;
+  margin: 4px;
+  padding: 8px;
+  width: 120px;
+  height: 70px;
+  background: #354052;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #E6EAEE;
+  color: white; }
+  .attachment:hover .title {
+    color: white; }
+  .attachment:hover .remove {
+    display: block; }
+  .attachment .remove {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: none; }
+  .attachment .type {
+    position: absolute;
+    bottom: 0px;
+    left: 8px; }
+
 .text-uppercase {
   text-transform: uppercase; }
 

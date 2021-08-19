@@ -130,3 +130,42 @@ img{
 .border-top, .border-bottom, .border-left, .border-right{
   border-color:$border-color;
 }
+
+//attachments cards
+
+.attachment-grid{
+
+  padding-left:50px;
+}
+
+.attachment{
+  position:relative;
+  margin:4px;
+  padding:8px;
+  width:120px;
+  height:70px;
+  background:$text-color;
+  display: block;
+  border-radius:$base-border-radius;
+  border:1px solid $border-color;
+  color:white;
+  &:hover{
+    .title{
+      color:white;
+    }
+    .remove{
+      display: block;
+    }
+  }
+  .remove{
+    position:absolute;
+    top: -10px;
+    right:-10px;
+    display: none;
+  }
+  .type{
+    position:absolute;
+    bottom:0px;
+    left:8px;
+  }
+}

@@ -357,11 +357,23 @@
 											%dt.col-5
 												%img.d-inline-block.align-middle{:src=>"/images/icon-attach.svg", :width=>"30px"}
 												%h4.bold-font.no-margin-bottom.d-inline-block.align-middle.half-margin-left
-													No files
+													3 files
 											%dd.col-7.text-right
 												%button.btn.btn-secondary.btn-icon.btn-circle{"data-toggle" => "dropdown", :type=>"button", :style=>"padding:3px 6px;"}
 													%i.material-icons{:style=>"font-size:12px!important;"}
 														add
+										.row
+											.attachment-grid
+												-3.times do
+													%a.attachment.d-inline-block{:href=>"#"}
+														%button.btn.btn-secondary.btn-icon.btn-circle.remove{"data-toggle" => "dropdown", :type=>"button", :style=>"padding:3px 6px;"}
+															%i.material-icons{:style=>"font-size:12px!important;"}
+																clear														
+														%h5.title.bold-font
+															Title of the file that can...
+														%h5.type
+															%span.badge.bg-light.text-color
+																SKETCH
 													
 											
 							.new-comment
