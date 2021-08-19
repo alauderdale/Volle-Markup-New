@@ -259,8 +259,6 @@
 												2m ago
 											%h4
 												I just want to see how this note will look with a very long note written in it .Notes often are not all that long but just wanting to make sure this area provides the best UX possible for prople.
-											/ %a{:href=>"#"}
-											/ 	%img{:src=>"/images/tmp/shot.png", :width=>"85px"}
 								.note-details-container
 									.note-details
 										%h4.medium-font
@@ -291,7 +289,99 @@
 													URL
 												%dd.col-sm-9.truncated-url
 													https://app.productstash.io/superlongurldontyouknow
+							.note-comment-container
+								.comment.note-comment
+									%div
+										%dl.row.half-margin-bottom
+											%dt.col-5
+												/ .avatar.avatar-initial.avatar-xs.d-inline-block
+												/ 	JD
+												%img.d-inline-block.align-middle.no-margin{:src=>"/images/avatar-unassigned.svg", :width=>"30px"}
+												%h4.bold-font.no-margin-bottom.d-inline-block.half-margin-left
+													Assignee
+											%dd.col-7
+												.dropdown.dropdown-subtle
+													%button.btn.btn-secondary.text-left.dropdown-action.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+														%h4.no-margin-bottom.d-inline-block
+															Unassigned
+													.dropdown-menu.max-height-dropdown
+														.dropdown-menu-inner
+															%button.dropdown-item.active{:type=>"button"} 
+																.avatar.avatar-initial.avatar-xs.half-margin-right.d-inline-block
+																	JD
+																Jane Doe
+															-20.times do
+																%button.dropdown-item{:type=>"button"} 
+																	.avatar.avatar-initial.avatar-xs.half-margin-right.d-inline-block
+																		JD
+																	=lorem.name
+										%dl.row.half-margin-bottom
+											%dt.col-5
+												%img.d-inline-block.align-middle{:src=>"/images/icon-bolt.svg", :width=>"30px"}
+												%h4.bold-font.no-margin-bottom.d-inline-block.align-middle.half-margin-left
+													Priority
+											%dd.col-7
+												.dropdown.dropdown-subtle
+													%button.btn.btn-secondary.text-left.dropdown-action.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+														%h4.no-margin-bottom.d-inline-block.align-middle.margin-right
+															High
+														%img.d-inline-block.align-middle.no-margin{:src=>"/images/priority-high.svg", :width=>"16px"}
+													.dropdown-menu.max-height-dropdown
+														.dropdown-menu-inner
+															%button.dropdown-item{:type=>"button"} 
+																%h4.no-margin-bottom.d-inline-block.align-middle
+																	None
+																%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-none.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+															%button.dropdown-item{:type=>"button"} 
+																%h4.no-margin-bottom.d-inline-block.align-middle
+																	Low
+																%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-low.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+															%button.dropdown-item{:type=>"button"} 
+																%h4.no-margin-bottom.d-inline-block.align-middle
+																	Medium
+																%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-medium.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+															%button.dropdown-item.active{:type=>"button"} 
+																%h4.no-margin-bottom.d-inline-block.align-middle
+																	High
+																%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-high.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+															%button.dropdown-item{:type=>"button"} 
+																%h4.no-margin-bottom.d-inline-block.align-middle
+																	Urgent
+																%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-urgent.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+															
+										%dl.row.no-margin-bottom
+											%dt.col-5
+												%img.d-inline-block.align-middle{:src=>"/images/icon-attach.svg", :width=>"30px"}
+												%h4.bold-font.no-margin-bottom.d-inline-block.align-middle.half-margin-left
+													2 files
+											%dd.col-7.text-right
+												%button.btn.btn-secondary.btn-icon.btn-circle{"data-toggle" => "dropdown", :type=>"button", :style=>"padding:3px 6px;"}
+													%i.material-icons{:style=>"font-size:12px!important;"}
+														add
+													
+												
 
+										#noteDetailsCollapse.note-details-items.collapse
+											%dl.row
+												%dt.col-sm-3
+													Browser
+												%dd.col-sm-9
+													Mac OS 10.14.0
+											%dl.row
+												%dt.col-sm-3
+													OS
+												%dd.col-sm-9
+													Chrome 71
+											%dl.row
+												%dt.col-sm-3
+													Viewport
+												%dd.col-sm-9
+													400x400
+											%dl.row
+												%dt.col-sm-3
+													URL
+												%dd.col-sm-9.truncated-url
+													https://app.productstash.io/superlongurldontyouknow
 							.new-comment
 								%textarea.form-control.full-width.quarter-margin-bottom.new-comment-field{:rows=>"1", :placeholder=>"Write a reply"}
 								%button.btn.btn-primary.btn-sm.float-right.add-comment-btn{:type=>"button"}

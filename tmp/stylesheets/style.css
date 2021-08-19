@@ -259,6 +259,8 @@ a {
     font-size: 14px; }
     .btn.btn-sm-text.dropdown-toggle:after {
       vertical-align: 0.10em; }
+  .btn.btn-circle {
+    border-radius: 100px; }
   .btn.btn-primary {
     background: #0042FF;
     border-color: #0042FF; }
@@ -1324,6 +1326,9 @@ input:checked + .slider:before {
   overflow-y: scroll;
   background: white;
   max-height: 300px; }
+
+.dropdown-subtle .btn-secondary {
+  border: none; }
 
 .checkbox-filter-item {
   cursor: pointer;
