@@ -32,6 +32,9 @@ a{
 			}
 		}
 	}
+	&.btn-circle{
+		border-radius:100px;
+	}
 	//primary buttons
 	&.btn-primary{
 		background:$link-color;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 23</title>
+    <g id="Labels,-statuses,-etc." stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-23">
+            <circle id="Oval" fill="#B4BBC6" cx="15" cy="15" r="15"></circle>
+            <path d="M19.6875,15.9375 C21.7585678,15.9375 23.4375,17.6164322 23.4375,19.6875 L23.437672,20.9305291 C21.5713756,23.5809278 18.487903,25.3125 15,25.3125 C11.511214,25.3125 8.42706321,23.5800509 6.56091079,20.928516 L6.5625,19.6875 C6.5625,17.6164322 8.24143219,15.9375 10.3125,15.9375 L19.6875,15.9375 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            <g id="Group-22" transform="translate(10.312500, 4.687500)" fill="#FFFFFF">
+                <circle id="Oval" cx="4.6875" cy="4.6875" r="4.6875"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
