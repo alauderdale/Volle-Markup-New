@@ -122,10 +122,13 @@ img {
   border-radius: 8px;
   border: 1px solid #E6EAEE;
   color: white; }
-  .attachment-preview:hover .title {
-    color: white; }
-  .attachment-preview:hover .remove {
-    display: block; }
+  .attachment-preview:hover {
+    background: #3f4a5b;
+    text-decoration: none; }
+    .attachment-preview:hover .title {
+      color: white; }
+    .attachment-preview:hover .remove {
+      display: block; }
   .attachment-preview .remove {
     position: absolute;
     top: -10px;

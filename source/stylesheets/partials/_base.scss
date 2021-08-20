@@ -150,6 +150,8 @@ img{
   border:1px solid $border-color;
   color:white;
   &:hover{
+    background:tint($text-color,5%);
+    text-decoration: none;
     .title{
       color:white;
     }
