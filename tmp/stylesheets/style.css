@@ -2090,6 +2090,9 @@ h3.market {
       .notes-list-container .notes-list-body .note-thumbnail .note-status-preview i {
         font-size: 18px;
         color: #7F8FA4; }
+      .notes-list-container .notes-list-body .note-thumbnail .note-priority-preview img, .notes-list-container .notes-list-body .note-thumbnail .note-asignee-preview img {
+        border: none;
+        border-radius: 0; }
     .notes-list-container .notes-list-body .notes-list-footer {
       position: fixed;
       bottom: 62px;

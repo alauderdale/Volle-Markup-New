@@ -351,6 +351,13 @@ $note-container-width:300px;
 	    			color:$light-text-color;
 	    		}
 	    	}
+	    	.note-priority-preview, .note-asignee-preview{
+	    		img{
+		    		border:none;
+		    		border-radius:0;
+	    		}
+	    		
+	    	}
 	    }
 	    .notes-list-footer{
 	    	position:fixed;

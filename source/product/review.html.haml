@@ -89,9 +89,13 @@
 								3
 						%h5
 							=lorem.words(10)
-						.note-status-preview
-							%i.material-icons-outlined{"data-toggle"=>"tooltip", :title=>"Needs review"}
+						.note-status-preview.d-inline
+							%i.material-icons.half-margin-right.align-middle{"data-toggle"=>"tooltip", :title=>"Needs review"}
 								remove_red_eye
+						.note-priority-preview.d-inline.half-margin-right
+							%img.align-middle.no-margin.align-middle{:src=>"/images/priority-urgent.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"Urgent"}
+						.note-asignee-preview.d-inline
+							%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
 						
 
 			.note-thumbnail.resolved
@@ -106,9 +110,13 @@
 							=lorem.first_name
 						%h5
 							=lorem.words(10)
-						.note-status-preview
-							%i.material-icons{"data-toggle"=>"tooltip", :title=>"Completed"}
+						.note-status-preview.d-inline
+							%i.material-icons.half-margin-right.align-middle{"data-toggle"=>"tooltip", :title=>"Completed"}
 								check_box
+						.note-priority-preview.d-inline.half-margin-right
+							%img.align-middle.no-margin.align-middle{:src=>"/images/priority-low.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"Low"}
+						.note-asignee-preview.d-inline
+							%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
 
 			- 30.times do
 				.note-thumbnail
@@ -123,9 +131,15 @@
 								=lorem.first_name
 							%h5
 								=lorem.words(10)
-							.note-status-preview
-								%i.material-icons-outlined{"data-toggle"=>"tooltip", :title=>"To Do"}
+							.note-status-preview.d-inline.half-margin-right
+								%i.material-icons-outlined.align-middle{"data-toggle"=>"tooltip", :title=>"To Do"}
 									crop_free
+							.note-priority-preview.d-inline.half-margin-right
+								%img.align-middle.no-margin.align-middle{:src=>"/images/priority-high.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"High"}
+							.note-asignee-preview.d-inline
+								%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
+								
+							
 
 
 
