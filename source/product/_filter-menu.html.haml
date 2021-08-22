@@ -27,12 +27,42 @@
 				disabled_by_default
 		.d-inline-block
 			Cancelled
-	/ .dropdown-item.checkbox-filter-item
-	/ 	.d-inline-block
-	/ 		%i.material-icons.icon-left
-	/ 			check_box
-	/ 	.d-inline-block
-	/ 		Completed
+%h6.dropdown-header
+	Priority
+.quarter-padding-top.quarter-padding-bottom
+	.dropdown-item.checkbox-filter-item
+		.d-inline-block.margin-right
+			%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-none.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+		.d-inline-block
+			None
+	.dropdown-item.checkbox-filter-item
+		.d-inline-block.margin-right
+			%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-low.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+		.d-inline-block
+			Low
+	.dropdown-item.checkbox-filter-item
+		.d-inline-block.margin-right
+			%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-medium.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+		.d-inline-block
+			Medium
+	.dropdown-item.checkbox-filter-item
+		.d-inline-block.margin-right
+			%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-high.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+		.d-inline-block
+			High
+	.dropdown-item.checkbox-filter-item
+		.d-inline-block.margin-right
+			%img.d-inline-block.align-middle.no-margin.float-right{:src=>"/images/priority-urgent.svg", :width=>"16px", :style=>"top:5px; position:relative;"}
+		.d-inline-block
+			Urgent
+%h6.dropdown-header
+	Assigned to
+.quarter-padding-top.quarter-padding-bottom
+	-5.times do
+		.dropdown-item.checkbox-filter-item
+			.avatar.avatar-initial.avatar-xs.half-margin-right.d-inline-block
+				JD
+			=lorem.name
 
 				
 
