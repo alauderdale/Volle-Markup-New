@@ -1283,6 +1283,12 @@ input:checked + .slider:before {
     height: 30px;
     font-size: 13px;
     line-height: 30px; }
+  .avatar.avatar-micro {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: bold; }
   .avatar.avatar-xl {
     width: 80px;
     height: 80px;
