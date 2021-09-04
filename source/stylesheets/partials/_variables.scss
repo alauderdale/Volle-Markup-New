@@ -41,7 +41,7 @@ $darker-gray-color: #393C3E;
 
 //links
 
-$link-color: #0042FF;
+$link-color: $primary-color;
 $link-hover-color:shade($secondary-color, 50%);
 
 
