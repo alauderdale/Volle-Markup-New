@@ -733,6 +733,9 @@ section {
 .list-of-options.simple .list-group input[type="radio"]:checked + .list-group-item {
   background-color: transparent; }
 
+.nav-tabs .nav-item .nav-link.active {
+  background: transparent; }
+
 .panel {
   border: 1px solid #0042FF;
   border-radius: 8px;

@@ -69,34 +69,79 @@
 					.note-zero-text
 						%h2.text-center.medium-font
 							Start your project. Here’s how.
-						.card-deck.double-margin-top.get-started-deck
-							.card
-								.card-body
-									%h3.card-title.medium-font
-										Install the browser extension
-									%p.card-text
-										Install the Chrome extension to capture notes on any website.
-								.card-footer
-									%a.btn.btn-primary.btn-block{:href=>"#"}
-										%img{:src=>"/images/chrome-icon.svg", :width=>"16px", :style=>"position:relative; top:-1px; margin-right:3px;"}
-										Show Chrome extension
-							.card
-								.card-body
-									%h3.card-title.medium-font
-										Invite your colleagues
-									%p.card-text
-										Invite anyone that will be reviewing your feedback.
-								.card-footer
-									%a.btn.btn-primary.btn-block{:href=>"#"}
-										Invite now
-							.card
-								.card-body
-									%h3.card-title.medium-font
-										Visit your website
-									%p.card-text
-										Open the extension and select this project. your notes will show up here.
-								.card-footer.text-center
-									%img.max-width.margin-auto{:src=>"/images/your-website.svg", :width=>"201px", :style=>"position:relative; top:6px;"}
+
+					%ul#myTab.nav.nav-tabs.justify-content-center.mt-4{:role => "tablist"}
+						%li.nav-item
+							%a#extension-tab.nav-link.active{"aria-controls" => "extension", "aria-selected" => "true", "data-toggle" => "tab", :href => "#extension", :role => "tab"} 
+								Browser extension
+						%li.nav-item
+							%a#widget-tab.nav-link{"aria-controls" => "profile", "aria-selected" => "false", "data-toggle" => "tab", :href => "#widget", :role => "tab"} 
+								Widget code
+					#myTabContent.tab-content
+						#extension.tab-pane.fade.show.active{"aria-labelledby" => "home-tab", :role => "tabpanel"} 
+							.card-deck.double-margin-top.get-started-deck.margin-auto
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											Install the browser extension
+										%p.card-text
+											Install the Chrome extension to capture notes on any website.
+									.card-footer
+										%a.btn.btn-primary.btn-block{:href=>"#"}
+											%img{:src=>"/images/chrome-icon.svg", :width=>"16px", :style=>"position:relative; top:-1px; margin-right:3px;"}
+											Show Chrome extension
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											Invite your colleagues
+										%p.card-text
+											Invite anyone that will be reviewing your feedback.
+									.card-footer
+										%a.btn.btn-primary.btn-block{:href=>"#"}
+											Invite now
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											Visit your website
+										%p.card-text
+											Open the extension and select this project. your notes will show up here.
+									.card-footer.text-center
+										%img.max-width.margin-auto{:src=>"/images/your-website.svg", :width=>"201px", :style=>"position:relative; top:6px;"}
+						#widget.tab-pane.fade{"aria-labelledby" => "profile-tab", :role => "tabpanel"} 
+							.card-deck.double-margin-top.get-started-deck.margin-auto
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											Install the widget
+										%p.card-text
+											Install the embedable widget on your website.
+									.card-footer
+										%a.btn.btn-primary.btn-block{:href=>"/product/settings/widget"}
+											%img{:src=>"/images/code-icon.svg", :width=>"26px", :style=>"position:relative; top:-1px; margin-right:3px;"}
+											widget settings
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											Invite your colleagues
+										%p.card-text
+											Invite anyone that will be reviewing your feedback.
+									.card-footer
+										%a.btn.btn-primary.btn-block{:href=>"#"}
+											Invite now
+								.card
+									.card-body
+										%h3.card-title.medium-font
+											View your website
+										%p.card-text
+											Capture feedback using the widget. your notes will show up here.
+									.card-footer.text-center
+										%img.max-width.margin-auto{:src=>"/images/your-website.svg", :width=>"201px", :style=>"position:relative; top:6px;"}
+
+
+
+
+
+						
 
 
 
