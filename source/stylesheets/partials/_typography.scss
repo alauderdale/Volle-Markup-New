@@ -148,7 +148,7 @@ ul.check-list{
     li{
       font-size: 16px;
       padding-left: 1.3em;
-      margin-bottom:5px;
+      margin-bottom:8px;
       &:before{
         content: "check"; /* FontAwesome Unicode */
         font-family: Material Icons;
@@ -156,8 +156,9 @@ ul.check-list{
         width: 1.3em; /* same as padding-left set on li */
         position:relative;
         top:4px;
-        font-size:20px;
+        font-size:15px;
         color:font-color;
+        margin-right:10px;
       }
     }
   }
@@ -198,6 +199,12 @@ ul.icon-list-better{
 
 .line-through{
   text-decoration: line-through;
+}
+
+.tooltip-highlight{
+  border-bottom:1px dashed shade($border-color,30%);
+  cursor:pointer;
+  display: inline;
 }
 
 //truncate

@@ -226,7 +226,7 @@ ul.check-list {
   ul.check-list li {
     font-size: 16px;
     padding-left: 1.3em;
-    margin-bottom: 5px; }
+    margin-bottom: 8px; }
     ul.check-list li:before {
       content: "check";
       /* FontAwesome Unicode */
@@ -237,8 +237,9 @@ ul.check-list {
       /* same as padding-left set on li */
       position: relative;
       top: 4px;
-      font-size: 20px;
-      color: font-color; }
+      font-size: 15px;
+      color: font-color;
+      margin-right: 10px; }
 
 ul.icon-list li {
   font-size: 14px;
@@ -264,6 +265,11 @@ ul.icon-list-better li {
 
 .line-through {
   text-decoration: line-through; }
+
+.tooltip-highlight {
+  border-bottom: 1px dashed #a1a4a7;
+  cursor: pointer;
+  display: inline; }
 
 @media (max-width: 768px) {
   .text-center-sm {
@@ -1100,11 +1106,13 @@ input:checked + .slider:before {
     border-top-right-radius: 16px;
     border: none;
     overflow: hidden; }
-  .card .card-list i {
-    font-size: 18px;
-    position: relative;
-    top: 4px;
-    color: #7F8FA4; }
+  .card .card-list {
+    font-size: 15px; }
+    .card .card-list i {
+      font-size: 18px;
+      position: relative;
+      top: 4px;
+      color: #7F8FA4; }
   .card .card-footer {
     border: none;
     background-color: transparent;
@@ -2647,9 +2655,9 @@ h3.market {
   max-width: 350px;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(81, 107, 152, 0.24); }
-  @media (max-width: 768px) {
+  border-radius: 7px;
+  border: 1px solid #E6EAEE; }
+  @media (max-width: 992px) {
     .card.price-card {
       min-height: auto; } }
   .card.price-card.popular {
@@ -2673,22 +2681,29 @@ h3.market {
       z-index: 99; }
   .card.price-card .card-header {
     position: relative;
+    text-align: center;
     border-bottom: 1px solid #E6EAEE;
-    border-top: 10px solid #E6EAEE; }
+    border-top: 5px solid #E6EAEE;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px; }
     .card.price-card .card-header .card-promo {
       color: #002eb3; }
   .card.price-card .card-body {
-    min-height: 240px; }
+    min-height: 320px; }
+    @media (max-width: 992px) {
+      .card.price-card .card-body {
+        min-height: 0px; } }
   .card.price-card .card-header, .card.price-card .card-body, .card.price-card .card-footer {
-    padding: 30px; }
+    padding: 20px; }
   .card.price-card h1 {
     position: relative;
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 25px; }
     .card.price-card h1 .price {
       font-size: 30px; }
     .card.price-card h1 .dollar-ammount {
       position: relative;
-      font-size: 55px; }
+      font-size: 45px; }
     .card.price-card h1 .month {
       font-size: 16px;
       position: relative;

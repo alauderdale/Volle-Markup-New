@@ -82,7 +82,7 @@
 								%img{:src=>"/images/denti-logo.png", :width=>"70px"}
 			.col-lg-5
 				.padded
-					.card.price-card.margin-auto{:style=>"min-height:auto;"}
+					.card.price-card.margin-auto{:style=>"min-height:0px;"}
 						.card-header.pro-header{:style=>"border-top-color:#FFAA00;"}
 							%h1.medium-font
 								Volley Team
@@ -98,62 +98,28 @@
 										$
 									%span.regular-font{:style=>"text-decoration:line-through;"}
 										300
+							%ul.card-list.list-unstyled.margin-top
+								%li
+									%span.medium-font
+										25 projects
+								%li
+									%span.medium-font
+										Unlimited notes
+								%li.tooltip-highlight{"data-toggle"=>"tooltip", :title=>"Collaborators are invited into a single project. Collaborators can create and respond to feedback within a project."}
+									%span.medium-font
+										Unlimited collaborators
 
 								
-						.card-body
+						.card-body{:style=>"min-height:0px;"}
 							%ul.card-list.list-unstyled.icon-list-better.check-list
 								%li
-									%span.bold-font
-										Unlimited 
-									notes
+									%span.tooltip-highlight{"data-toggle"=>"tooltip", :title=>"Collaborators are invited into a single project. Collaborators can create and respond to feedback within a project."}
+										Team workspaces
 								%li
-									%span.bold-font
-										Unlimited
-									projects
+									%span.tooltip-highlight{"data-toggle"=>"tooltip", :title=>"Collaborators are invited into a single project. Collaborators can create and respond to feedback within a project."}
+										4 team members
 								%li
-									%span.bold-font
-										Priority 
-									support
-								%li
-									%span.bold-font
-										Export 
-									to Trello & Jira
-								%li
-									%span.bold-font
-										Remove 
-									Volley branding
-								%li
-									%span.bold-font
-										Team
-									workspaces
-								%li
-									Start at 
-									%span.bold-font
-										4
-									team members
-									%i.material-icons.cursor-pointer{"data-toggle"=>"tooltip", :title=>"Team members can create and join projects within shared team workspaces. It is posible to add members to multiple workspaces."}
-										info
-									%span.light-text-color
-										%span{:style=>"font-size:13px;"}
-											$5/member/mo for more team members
-								
-								
-
-								%hr.half-margin-bottom
-								%li
-									%span.bold-font
-										Draw
-									tools
-								%li
-									%span.bold-font
-										Unlimited 
-									collaborators
-									%i.material-icons.cursor-pointer{"data-toggle"=>"tooltip", :title=>"Collaborators are invited into a single project. Collaborators can create and respond to feedback within a project."}
-										info
-								%li
-									%span.bold-font
-										@ 
-									mentions 
+									Project folders - coming soon
 					.double-margin-top.padded.no-padding-top
 						%h4.light-text-color
 							Your new subscription will begin immediately. Any previous payments you made will be credited towards your new plan. The amount you owe today is the difference in price between your old plan and your new plan, for the remainder of the billing period. Each year you will be charged at a rate of $204/yr until you cancel your subscription.
