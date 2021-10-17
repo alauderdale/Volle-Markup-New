@@ -935,3 +935,13 @@ $note-container-width:300px;
 	}
 }
 
+
+.upgrade-button-container{
+	.btn{
+		border-radius:100px;
+		border:1px solid tint($link-color,50%);
+		&:hover{
+			border:1px solid $link-color;
+		}
+	}
+}
