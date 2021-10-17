@@ -2656,13 +2656,12 @@ h3.market {
   overflow: hidden;
   position: relative;
   border-radius: 7px;
-  border: 1px solid #E6EAEE; }
+  border: 1px solid #cfd3d6; }
   @media (max-width: 992px) {
     .card.price-card {
       min-height: auto; } }
   .card.price-card.popular {
-    position: relative;
-    border-radius: 20px; }
+    position: relative; }
     .card.price-card.popular:before {
       content: "POPULAR";
       position: absolute;
@@ -2689,12 +2688,16 @@ h3.market {
     .card.price-card .card-header .card-promo {
       color: #002eb3; }
   .card.price-card .card-body {
-    min-height: 320px; }
+    min-height: 287px; }
     @media (max-width: 992px) {
       .card.price-card .card-body {
         min-height: 0px; } }
   .card.price-card .card-header, .card.price-card .card-body, .card.price-card .card-footer {
     padding: 20px; }
+  .card.price-card .card-header {
+    padding-top: 16px; }
+    .card.price-card .card-header .btn-lg {
+      padding: 10px !important; }
   .card.price-card h1 {
     position: relative;
     font-weight: 700;
