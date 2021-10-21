@@ -2542,6 +2542,12 @@ h3.market {
   .people-list .media:last-of-type {
     border-bottom: none; }
 
+.upgrade-button-container .btn {
+  border-radius: 100px;
+  border: 1px solid #80a1ff; }
+  .upgrade-button-container .btn:hover {
+    border: 1px solid #0042FF; }
+
 @keyframes menu-zoom {
   0% {
     opacity: 0;
