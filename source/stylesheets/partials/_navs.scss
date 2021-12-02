@@ -239,3 +239,38 @@
 		}
 	}
 }
+
+
+//pagination
+
+
+.pagination{
+	align-items: center;
+	font-size: 18px;
+	i{
+		font-size:18px;
+		line-height: 28px;
+	}
+	li.page-item{
+		a.page-link{
+			color:$text-color;
+			padding:8px 16px;
+			border-radius: 100px;
+			border:none;
+			transition-duration: .2s;
+			&:hover{
+				background:none;
+				transform:translateY(-2px);
+			}
+		}
+		&.active{
+				a.page-link{
+					color:white;
+					background:$link-color;
+					&:hover{
+						background:$link-color;
+					}
+				}
+			}
+	}
+}

@@ -89,7 +89,7 @@
 									.dropdown-divider
 									%button.dropdown-item{:type=>"button", :onclick=>"location.href='products/zero';"} 
 										Delete
-			-1.times do
+			-6.times do
 				.col-sm-12.col-md-12.col-lg-6
 					.product-card-wrapper.margin-bottom
 						%a.card.product-card{:href=>"/product/unavailable"}
@@ -122,7 +122,27 @@
 									%button.dropdown-item{:type=>"button", :onclick=>"location.href='products/zero';"} 
 										Delete
 			
-											
+		.row.justify-content-center
+			.col
+				.d-flex.justify-content-center
+					%nav.pt-5{"aria-label" => "Page navigation example"}
+						%ul.pagination
+							%li.page-item
+								%a.page-link{"aria-label" => "Previous", :href => "#"}
+									%span{"aria-hidden" => "true"} 
+										%i.material-icons
+											chevron_left
+							%li.page-item
+								%a.page-link{:href => "#"} 1
+							%li.page-item.active
+								%a.page-link{:href => "#"} 2
+							%li.page-item
+								%a.page-link{:href => "#"} 3
+							%li.page-item
+								%a.page-link{"aria-label" => "Next", :href => "#"}
+									%span{"aria-hidden" => "true"} 
+										%i.material-icons
+											chevron_right										
 
 
 

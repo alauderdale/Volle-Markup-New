@@ -742,6 +742,27 @@ section {
 .nav-tabs .nav-item .nav-link.active {
   background: transparent; }
 
+.pagination {
+  align-items: center;
+  font-size: 18px; }
+  .pagination i {
+    font-size: 18px;
+    line-height: 28px; }
+  .pagination li.page-item a.page-link {
+    color: #354052;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+    transition-duration: .2s; }
+    .pagination li.page-item a.page-link:hover {
+      background: none;
+      transform: translateY(-2px); }
+  .pagination li.page-item.active a.page-link {
+    color: white;
+    background: #0042FF; }
+    .pagination li.page-item.active a.page-link:hover {
+      background: #0042FF; }
+
 .panel {
   border: 1px solid #0042FF;
   border-radius: 8px;
