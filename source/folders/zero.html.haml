@@ -14,12 +14,13 @@
 		.row.margin-bottom
 			.col
 				.page-header-for-title
-					%h2.medium-font.title
-						Folders
-						%i.material-icons.align-middle
-							chevron_right
-						My folder
-
+					.d-flex.justify-content-between
+						.d-inline-block
+							%h2.medium-font.title
+								My folders
+						.d-inline-block
+							%button.btn.btn-primary.ml-2{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#createFolderModal"} 
+								+ New folder
 
 %section.no-padding-top.no-padding-bottom
 	.container.product-card-container
