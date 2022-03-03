@@ -1,0 +1,114 @@
+;;;
+
+"title": "My folders"
+
+;;;
+
+
+
+/ = partial "free-trial-card"
+
+
+%section.no-padding-bottom
+	.container.product-card-container
+		.row.margin-bottom
+			.col
+				.page-header-for-title
+					.d-flex.justify-content-between
+						.d-inline-block
+							%h2.medium-font.title
+								My folders
+						.d-inline-block
+							%button.btn.btn-primary.ml-2{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#createFolderModal"} 
+								+ New folder
+
+
+%section.no-padding-top.no-padding-bottom
+	.container.product-card-container
+		=partial "search_sort" 
+
+%section
+	.container.product-card-container
+		.row
+			-4.times do
+				.col-sm-12.col-md-12.col-lg-4
+					.product-card-wrapper
+						%a.card.product-card{:href=>"/folders/folder"}
+							.card-body	
+								.row
+									.col
+										.thumbnail
+											.mb-3
+												%img{:src=>"../images/folder-icon.svg", :width=>"50"}
+								.row
+									.col-10
+										%h3.card-url.no-margin-bottom
+											Folder name
+										%h4.card-text
+											Updated 3min ago
+									.col-2
+						.card-actions
+							.dropdown.text-right
+								%button.btn.btn-flat.btn-icon{"data-toggle" => "dropdown", :type=>"button"}
+									%i.material-icons
+										more_horiz
+								.dropdown-menu.dropdown-menu-right
+									%button.dropdown-item.text-danger{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#deleteFolderModal"}  
+										Delete
+											
+
+
+
+#deleteFolderModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Delete folder
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					%p
+						This will permanently delete this folder. Projects within the selected folder will not be deleted.
+			.modal-footer.no-border-top
+				%button.btn.btn-link.light-text-color{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-danger{:tyle=>"button", :onclick=>"location.href='/folders/zero';"}
+					Yes, delete folder
+
+
+
+
+
+#createFolderModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Create new folder
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.margin-bottom
+						%label
+							Folder name
+						%form
+							.margin-bottom
+								%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Enter folder name"}
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-primary{:tyle=>"button", :onclick=>"location.href='/folders/folder';"}
+					Create folder
+					
+
+
+					
+
+
+
+					

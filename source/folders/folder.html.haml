@@ -1,0 +1,70 @@
+;;;
+
+"title": "My folders"
+
+;;;
+
+
+
+/ = partial "free-trial-card"
+
+
+%section.no-padding-bottom
+	.container.product-card-container
+		.row.margin-bottom
+			.col
+				.page-header-for-title
+					%h2.medium-font.title
+						%a.text-color{:href=>"/folders"}
+							My folders
+						%i.material-icons.align-middle
+							chevron_right
+						Folder name
+
+
+%section.no-padding-top.no-padding-bottom
+	.container.product-card-container
+		=partial "search_sort_in_folder" 
+
+%section
+	.container.product-card-container
+		.row
+			.col-lg-12
+				.card
+					.padded.double-padding-top.double-padding-bottom
+						.double-padding-top.double-padding-bottom
+							.text-center
+								%img.marign-bottom.double-margin-bottom{:src=>"../images/products-zero.svg", :width=>"204"}
+								%h2
+									No projects here
+								%p.light-text-color.no-margin-bottom
+									There are no projects in this folder yet.
+					
+
+
+					
+
+#createProjectModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Create new project
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.margin-bottom
+						%label
+							Project name
+						%form
+							.margin-bottom
+								%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Enter project name"}
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-primary{:tyle=>"button", :onclick=>"location.href='/folders/folder';"}
+					Create project
+
+					

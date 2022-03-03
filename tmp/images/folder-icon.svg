@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="52px" viewBox="0 0 63 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 18</title>
+    <defs>
+        <path d="M17.7415833,0 C18.9453858,-6.43838386e-15 20.0990004,0.482323451 20.9445626,1.33915772 L25.892593,6.35314997 C26.7381551,7.20998424 27.8917698,7.69230769 29.0955722,7.69230769 L56.2288889,7.69230769 C58.7141703,7.69230769 60.7288889,9.70702632 60.7288889,12.1923077 L60.728,21.04 L0,21.04 L4.08562073e-13,4.5 C4.08257714e-13,2.01471863 2.01471863,4.56538782e-16 4.5,0 L17.7415833,0 Z" id="path-1"></path>
+        <filter x="-2.5%" y="-7.1%" width="104.9%" height="114.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.418952142 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="4.54747351e-13" y="15.6108597" width="61" height="34.3891403" rx="4.5"></rect>
+        <filter x="-2.5%" y="-10.2%" width="104.9%" height="114.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="-2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.35570137   0 0 0 0 0.491963885   0 0 0 0 0.874547101  0 0 0 0.25314139 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Folders-shot" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Folders" transform="translate(-384.000000, -290.000000)">
+            <g id="Group-3" transform="translate(358.000000, 264.000000)">
+                <g id="Group-18" transform="translate(27.000000, 27.000000)">
+                    <g id="Combined-Shape">
+                        <use fill-opacity="0.388957" fill="#0042FF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use stroke="#0042FF" stroke-width="1" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use stroke="#0042FF" stroke-width="1" fill="#D4DEFA" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

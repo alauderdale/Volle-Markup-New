@@ -47,7 +47,7 @@ clear
 <a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#'>
 <img alt='Avatar' class='avatar avatar-xs quarter-margin-right align-middle' src='../images/img_avatar.png'>
 <span class='medium-font menu-text align-middle'>
-Collin Walsh
+Hector Glass
 </span>
 <i class='material-icons align-middle'>
 unfold_more
@@ -462,8 +462,11 @@ Create a new team
 </div>
 </nav>
 <nav class='navbar nav flex-column margin-bottom'>
-<a class='active nav-link' href='/products/'>
+<a class='nav-link active' href='/products/'>
 Projects
+</a>
+<a class='nav-link' href='/folders/'>
+Folders
 </a>
 <a class='nav-link' href='/products/archived'>
 Archive
@@ -655,11 +658,17 @@ Edit
 <button class='dropdown-item' type='button'>
 Share
 </button>
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
+</button>
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
+</button>
 <button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
 Archive
 </button>
 <div class='dropdown-divider'></div>
-<button class='dropdown-item' onclick='location.href=&#39;/products/zero&#39;;' type='button'>
+<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
 Delete
 </button>
 </div>
@@ -710,55 +719,11 @@ Edit
 <button class='dropdown-item' type='button'>
 Share
 </button>
-<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
-Archive
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
 </button>
-<div class='dropdown-divider'></div>
-<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
-Delete
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class='col-sm-12 col-md-12 col-lg-6'>
-<div class='product-card-wrapper margin-bottom'>
-<a class='card product-card' href='/product/unavailable'>
-<div class='card-header no-padding-bottom'>
-<div class='thumbnail-wrapper'>
-<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
-</div>
-</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-8'>
-<!-- %h3.no-margin-bottom.card-title.medium-font -->
-<!-- Project title -->
-<h3 class='card-url no-margin-bottom'>
-Unavailable project
-</h3>
-<h4 class='card-text'>
-Created Oct 17, 2019
-</h4>
-</div>
-<div class='col-4'></div>
-</div>
-</div>
-</a>
-<div class='card-actions'>
-<div class='dropdown text-right'>
-<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
-<i class='material-icons'>
-more_horiz
-</i>
-</button>
-<div class='dropdown-menu dropdown-menu-right'>
-<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
-Edit
-</button>
-<button class='dropdown-item' type='button'>
-Share
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
 </button>
 <button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
 Archive
@@ -810,55 +775,11 @@ Edit
 <button class='dropdown-item' type='button'>
 Share
 </button>
-<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
-Archive
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
 </button>
-<div class='dropdown-divider'></div>
-<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
-Delete
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class='col-sm-12 col-md-12 col-lg-6'>
-<div class='product-card-wrapper margin-bottom'>
-<a class='card product-card' href='/product/unavailable'>
-<div class='card-header no-padding-bottom'>
-<div class='thumbnail-wrapper'>
-<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
-</div>
-</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-8'>
-<!-- %h3.no-margin-bottom.card-title.medium-font -->
-<!-- Project title -->
-<h3 class='card-url no-margin-bottom'>
-Unavailable project
-</h3>
-<h4 class='card-text'>
-Created Oct 17, 2019
-</h4>
-</div>
-<div class='col-4'></div>
-</div>
-</div>
-</a>
-<div class='card-actions'>
-<div class='dropdown text-right'>
-<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
-<i class='material-icons'>
-more_horiz
-</i>
-</button>
-<div class='dropdown-menu dropdown-menu-right'>
-<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
-Edit
-</button>
-<button class='dropdown-item' type='button'>
-Share
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
 </button>
 <button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
 Archive
@@ -910,55 +831,11 @@ Edit
 <button class='dropdown-item' type='button'>
 Share
 </button>
-<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
-Archive
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
 </button>
-<div class='dropdown-divider'></div>
-<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
-Delete
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class='col-sm-12 col-md-12 col-lg-6'>
-<div class='product-card-wrapper margin-bottom'>
-<a class='card product-card' href='/product/unavailable'>
-<div class='card-header no-padding-bottom'>
-<div class='thumbnail-wrapper'>
-<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
-</div>
-</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-8'>
-<!-- %h3.no-margin-bottom.card-title.medium-font -->
-<!-- Project title -->
-<h3 class='card-url no-margin-bottom'>
-Unavailable project
-</h3>
-<h4 class='card-text'>
-Created Oct 17, 2019
-</h4>
-</div>
-<div class='col-4'></div>
-</div>
-</div>
-</a>
-<div class='card-actions'>
-<div class='dropdown text-right'>
-<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
-<i class='material-icons'>
-more_horiz
-</i>
-</button>
-<div class='dropdown-menu dropdown-menu-right'>
-<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
-Edit
-</button>
-<button class='dropdown-item' type='button'>
-Share
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
 </button>
 <button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
 Archive
@@ -1009,6 +886,180 @@ Edit
 </button>
 <button class='dropdown-item' type='button'>
 Share
+</button>
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
+</button>
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
+</button>
+<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
+Archive
+</button>
+<div class='dropdown-divider'></div>
+<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
+Delete
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12 col-md-12 col-lg-6'>
+<div class='product-card-wrapper margin-bottom'>
+<a class='card product-card' href='/product/unavailable'>
+<div class='card-header no-padding-bottom'>
+<div class='thumbnail-wrapper'>
+<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
+</div>
+</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-8'>
+<!-- %h3.no-margin-bottom.card-title.medium-font -->
+<!-- Project title -->
+<h3 class='card-url no-margin-bottom'>
+Unavailable project
+</h3>
+<h4 class='card-text'>
+Created Oct 17, 2019
+</h4>
+</div>
+<div class='col-4'></div>
+</div>
+</div>
+</a>
+<div class='card-actions'>
+<div class='dropdown text-right'>
+<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
+<i class='material-icons'>
+more_horiz
+</i>
+</button>
+<div class='dropdown-menu dropdown-menu-right'>
+<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
+Edit
+</button>
+<button class='dropdown-item' type='button'>
+Share
+</button>
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
+</button>
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
+</button>
+<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
+Archive
+</button>
+<div class='dropdown-divider'></div>
+<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
+Delete
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12 col-md-12 col-lg-6'>
+<div class='product-card-wrapper margin-bottom'>
+<a class='card product-card' href='/product/unavailable'>
+<div class='card-header no-padding-bottom'>
+<div class='thumbnail-wrapper'>
+<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
+</div>
+</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-8'>
+<!-- %h3.no-margin-bottom.card-title.medium-font -->
+<!-- Project title -->
+<h3 class='card-url no-margin-bottom'>
+Unavailable project
+</h3>
+<h4 class='card-text'>
+Created Oct 17, 2019
+</h4>
+</div>
+<div class='col-4'></div>
+</div>
+</div>
+</a>
+<div class='card-actions'>
+<div class='dropdown text-right'>
+<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
+<i class='material-icons'>
+more_horiz
+</i>
+</button>
+<div class='dropdown-menu dropdown-menu-right'>
+<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
+Edit
+</button>
+<button class='dropdown-item' type='button'>
+Share
+</button>
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
+</button>
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
+</button>
+<button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
+Archive
+</button>
+<div class='dropdown-divider'></div>
+<button class='dropdown-item' onclick='location.href=&#39;products/zero&#39;;' type='button'>
+Delete
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12 col-md-12 col-lg-6'>
+<div class='product-card-wrapper margin-bottom'>
+<a class='card product-card' href='/product/unavailable'>
+<div class='card-header no-padding-bottom'>
+<div class='thumbnail-wrapper'>
+<div class='thumbnail' style='background-image:url(&#39;/images/tmp/demo-shot-2.png&#39;);'></div>
+</div>
+</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-8'>
+<!-- %h3.no-margin-bottom.card-title.medium-font -->
+<!-- Project title -->
+<h3 class='card-url no-margin-bottom'>
+Unavailable project
+</h3>
+<h4 class='card-text'>
+Created Oct 17, 2019
+</h4>
+</div>
+<div class='col-4'></div>
+</div>
+</div>
+</a>
+<div class='card-actions'>
+<div class='dropdown text-right'>
+<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
+<i class='material-icons'>
+more_horiz
+</i>
+</button>
+<div class='dropdown-menu dropdown-menu-right'>
+<button class='dropdown-item' data-target='#editModal' data-toggle='modal' type='button'>
+Edit
+</button>
+<button class='dropdown-item' type='button'>
+Share
+</button>
+<button class='dropdown-item' data-target='#moveProjectModal' data-toggle='modal' type='button'>
+Move...
+</button>
+<button class='dropdown-item' data-target='#transferOwnershipModal' data-toggle='modal' type='button'>
+Transfer ownership
 </button>
 <button class='dropdown-item' data-target='#archiveModal' data-toggle='modal' type='button'>
 Archive
@@ -1133,6 +1184,132 @@ Cancel, don't archive
 </button>
 <button class='btn btn-primary' data-dismiss='modal' tyle='button'>
 Yes, archive
+</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='transferOwnershipModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h2 class='padding-left'>
+Transfer ownership
+</h2>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top no-padding-bottom'>
+<p>
+Which account do you want to transfer this project to?
+</p>
+<div class='margin-bottom'>
+<form>
+<div class='margin-bottom'>
+<input class='form-control form-control-lg' placeholder='Enter email...' type='text'>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class='modal-footer no-border-top'>
+<button class='btn btn-link' data-dismiss='modal' tyle='button'>
+Cancel, do not transfer
+</button>
+<button class='btn btn-primary' data-dismiss='modal' tyle='button'>
+Yes, transfer project
+</button>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='moveProjectModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h2 class='padding-left'>
+Move Project name
+</h2>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top no-padding-bottom'>
+<div class='margin-bottom'>
+<label>
+Currently in:
+</label>
+<div class='dropdown'>
+<button class='btn btn-secondary text-left btn-block btn-lg' data-toggle='dropdown' type='button'>
+<div class='d-flex justify-content-between align-items-center'>
+<div class='d-inline-block'>
+<i class='material-icons-outlined align-middle mr-2'>
+person_outline
+</i>
+Eternal contrast
+</div>
+<div class='d-inline-block'>
+<i class='material-icons'>
+expand_more
+</i>
+</div>
+</div>
+</button>
+<div class='dropdown-menu full-width'>
+<button class='dropdown-item' type='button'>
+<i class='material-icons-outlined icon-left'>
+person_outline
+</i>
+Personal projects
+</button>
+<button class='dropdown-item active' type='button'>
+<i class='material-icons-outlined icon-left'>
+group
+</i>
+Eternal contrast
+</button>
+<button class='dropdown-item' type='button'>
+<i class='material-icons-outlined icon-left'>
+group
+</i>
+Another team
+</button>
+</div>
+</div>
+<div class='mt-3'>
+<div class='list-group select-list-group'>
+<button class='list-group-item list-group-item-action' type='button'>
+<i class='material-icons-outlined icon-left align-middle mr-2'>
+group
+</i>
+Eternal contrast
+</button>
+<button class='list-group-item list-group-item-action' type='button'>
+<i class='material-icons-outlined icon-left align-middle mr-2'>
+folder
+</i>
+Folder 1
+</button>
+<button class='list-group-item list-group-item-action' type='button'>
+<i class='material-icons-outlined icon-left align-middle mr-2'>
+folder
+</i>
+Folder 2
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer no-border-top'>
+<button class='btn btn-link' data-dismiss='modal' tyle='button'>
+Cancel
+</button>
+<button class='btn btn-primary' data-dismiss='modal' tyle='button'>
+Move
 </button>
 </div>
 </div>

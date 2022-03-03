@@ -21,8 +21,11 @@ a{
 
 
 	&.btn-lg{
-		padding: .65rem 2rem;
+		padding: .65rem 1.5rem;
 		font-size:16px;
+		.material-icons, .material-icons-outlined {
+			font-size: 18px;
+		}
 	}
 	&.btn-sm-text{
 		font-size:14px;

@@ -47,10 +47,14 @@
 										Edit
 									%button.dropdown-item{:type=>"button"} 
 										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#moveProjectModal"}  
+										Move...
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#transferOwnershipModal"} 
+										Transfer ownership
 									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
 										Archive
 									.dropdown-divider
-									%button.dropdown-item{:type=>"button", :onclick=>"location.href='/products/zero';"} 
+									%button.dropdown-item{:type=>"button", :onclick=>"location.href='products/zero';"} 
 										Delete
 			-1.times do
 				.col-sm-12.col-md-12.col-lg-6
@@ -84,6 +88,10 @@
 										Edit
 									%button.dropdown-item{:type=>"button"} 
 										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#moveProjectModal"}  
+										Move...
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#transferOwnershipModal"} 
+										Transfer ownership
 									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
 										Archive
 									.dropdown-divider
@@ -116,6 +124,10 @@
 										Edit
 									%button.dropdown-item{:type=>"button"} 
 										Share
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#moveProjectModal"}  
+										Move...
+									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#transferOwnershipModal"} 
+										Transfer ownership
 									%button.dropdown-item{:type=>"button", "data-toggle"=>"modal", "data-target"=>"#archiveModal"} 
 										Archive
 									.dropdown-divider
@@ -199,4 +211,88 @@
 				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
 					Yes, archive
 
-					
+
+
+#transferOwnershipModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Transfer ownership
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					%p
+						Which account do you want to transfer this project to?
+					.margin-bottom
+						%form
+							.margin-bottom
+								%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Enter email..."}
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel, do not transfer
+				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
+					Yes, transfer project
+
+
+
+
+#moveProjectModal.modal{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog{:role => "document"}
+		.modal-content
+			.modal-header
+				%h2.padding-left
+					Move Project name
+				%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+
+			.modal-body
+				.padded.no-padding-top.no-padding-bottom
+					.margin-bottom
+						%label
+							Currently in:
+						.dropdown
+							%button.btn.btn-secondary.text-left.btn-block.btn-lg{:type=>"button", "data-toggle" => "dropdown"}
+								.d-flex.justify-content-between.align-items-center
+									.d-inline-block
+										%i.material-icons-outlined.align-middle.mr-2
+											person_outline
+										Eternal contrast
+									.d-inline-block
+										%i.material-icons
+											expand_more
+							.dropdown-menu.full-width
+								%button.dropdown-item{:type=>"button"} 
+									%i.material-icons-outlined.icon-left
+										person_outline
+									Personal projects
+								%button.dropdown-item.active{:type=>"button"} 
+									%i.material-icons-outlined.icon-left
+										group
+									Eternal contrast
+								%button.dropdown-item{:type=>"button"} 
+									%i.material-icons-outlined.icon-left
+										group
+									Another team
+						.mt-3
+							.list-group.select-list-group
+								%button.list-group-item.list-group-item-action{:type => "button"}
+									%i.material-icons-outlined.icon-left.align-middle.mr-2
+										group
+									Eternal contrast
+								%button.list-group-item.list-group-item-action{:type => "button"}
+									%i.material-icons-outlined.icon-left.align-middle.mr-2
+										folder
+									Folder 1
+								%button.list-group-item.list-group-item-action{:type => "button"}
+									%i.material-icons-outlined.icon-left.align-middle.mr-2
+										folder
+									Folder 2
+
+			.modal-footer.no-border-top
+				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
+					Cancel
+				%button.btn.btn-primary{:tyle=>"button", "data-dismiss" => "modal"}
+					Move

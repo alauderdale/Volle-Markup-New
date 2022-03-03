@@ -18,7 +18,7 @@ Volley | Fast, easy feedback for your website"
 <script src="../../bower_components/bootstrap/site/docs/4.3/assets/js/vendor/jquery-slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script><script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script><script src="../../javascripts/scripts.js"></script>
 
 </head>
-<body class='products products_team-zero products_team-zero_index'>
+<body class='folders folders_zero folders_zero_index'>
 <div id='dashboard-container'>
 <!-- .alert.alert-promo.alert-dismissible.fade.show{:role => "alert"} -->
 <!-- .container.text-center -->
@@ -47,7 +47,7 @@ clear
 <a class='nav-link dropdown-toggle' data-toggle='dropdown' href='#'>
 <img alt='Avatar' class='avatar avatar-xs quarter-margin-right align-middle' src='../../images/img_avatar.png'>
 <span class='medium-font menu-text align-middle'>
-Earl Beasley
+Johnny Barton
 </span>
 <i class='material-icons align-middle'>
 unfold_more
@@ -462,10 +462,10 @@ Create a new team
 </div>
 </nav>
 <nav class='navbar nav flex-column margin-bottom'>
-<a class='nav-link active' href='/products/'>
+<a class='nav-link' href='/products/'>
 Projects
 </a>
-<a class='nav-link' href='/folders/'>
+<a class='nav-link active' href='/folders/'>
 Folders
 </a>
 <a class='nav-link' href='/products/archived'>
@@ -530,50 +530,65 @@ Create team
 </div>
 
 <div class='main'>
-<!-- .alert-container -->
-<!-- .alert.alert-success -->
-<!-- .container.product-card-container.text-center -->
-<!-- Password changed successfully. -->
 <!-- = partial "free-trial-card" -->
 <section class='no-padding-bottom'>
 <div class='container product-card-container'>
-<div class='row'>
-<div class='col-sm-12'>
-<div class='page-header no-border'>
-<div class='row'>
-<div class='col-sm-12'>
-<form class='add-new-product-bar'>
-<div class='form-row'>
-<div class='col-xl-9 col-lg-8 col-md-8 mb-3'>
-<input class='form-control form-control-lg' placeholder='Project name'>
-</div>
-<div class='col-xl-3 col-lg-4 col-md-4 mb-3'>
-<button class='btn btn-primary mb-2 btn-block btn-lg' onclick='location.href=&#39;/product/review-zero&#39;;' type='button'>
-Create Project
-</button>
-</div>
-</div>
-</form>
-</div>
-</div>
-<!-- .row -->
-<!-- .col-sm-12 -->
-<!-- %ul.nav.tab-nav.justify-content-center.justify-content-lg-start -->
-<!-- %li.nav-item -->
-<!-- %a.nav-link{:href=>"/products/", :class => (current_page.data.title === "All projects") ? "active" : ""} -->
-<!-- Projects -->
-<!-- %li.nav-item -->
-<!-- %a.nav-link{:href=>"/products/archived", :class => (current_page.data.title === "Archived") ? "active" : ""} -->
-<!-- Archived -->
-<!-- %li.nav-item -->
-<!-- %a.nav-link{:href=>"/products/team", :class => (current_page.data.title === "Team") ? "active" : ""} -->
-<!-- Team -->
+<div class='row margin-bottom'>
+<div class='col'>
+<div class='page-header-for-title'>
+<h2 class='medium-font title'>
+Folders
+<i class='material-icons align-middle'>
+chevron_right
+</i>
+My folder
+</h2>
 </div>
 </div>
 </div>
 </div>
 </section>
+<section class='no-padding-top no-padding-bottom'>
+<div class='container product-card-container'>
+<div class='row'>
+<div class='col-4'>
+<div class='input-group simple-prepend'>
+<div class='input-group-prepend'></div>
+<div class='input-group-text'>
+<div class='material-icons'>
+search
+</div>
+</div>
+<input class='form-control' id='inlineFormInputGroup' placeholder='Search...' type='text'>
+</div>
+</div>
+<div class='col-8'>
+<div class='inline-block align-middle d-flex justify-content-end align-items-center' style='line-height:36px;'>
+<div class='d-inline-block'>
+<h4 class='no-margin medium-font pt-2'>
+Sort by
+<span class='link-color activity-filter cursor-pointer' data-toggle='dropdown'>
+Latest activity
+<span class='material-icons align-middle dropdown'>
+expand_more
+</span>
+<div class='dropdown-menu'>
+<a class='dropdown-item' href='#'>
+Latest activity
+</a>
+<a class='dropdown-item' href='#'>
+Alphanumeric
+</a>
+</div>
+</span>
+</h4>
+</div>
+</div>
+</div>
+</div>
 
+</div>
+</section>
 <section>
 <div class='container product-card-container'>
 <div class='row'>
@@ -582,12 +597,12 @@ Create Project
 <div class='padded double-padding-top double-padding-bottom'>
 <div class='double-padding-top double-padding-bottom'>
 <div class='text-center'>
-<img class='marign-bottom double-margin-bottom' src='../images/team-zero.svg' width='404'>
+<img class='marign-bottom double-margin-bottom' src='../images/folder-icon.svg' width='80'>
 <h2>
-No team projects... yet
+No folders... yet
 </h2>
 <p class='light-text-color no-margin-bottom'>
-Once team members create projects, they’ll appear here
+Folders from your team will appear here
 </p>
 </div>
 </div>
@@ -597,6 +612,42 @@ Once team members create projects, they’ll appear here
 </div>
 </div>
 </section>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='createFolderModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h2 class='padding-left'>
+Create new folder
+</h2>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top no-padding-bottom'>
+<div class='margin-bottom'>
+<label>
+Folder name
+</label>
+<form>
+<div class='margin-bottom'>
+<input class='form-control form-control-lg' placeholder='Enter folder name' type='text'>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class='modal-footer no-border-top'>
+<button class='btn btn-link' data-dismiss='modal' tyle='button'>
+Cancel
+</button>
+<button class='btn btn-primary' onclick='location.href=&#39;/folders/folder&#39;;' tyle='button'>
+Create folder
+</button>
+</div>
+</div>
+</div>
+</div>
 
 </div>
 
