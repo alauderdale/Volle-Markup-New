@@ -109,8 +109,8 @@
   %nav.navbar.nav.flex-column.margin-bottom
     %a.nav-link{:href=>"/products/", :class => (current_page.data.title === "All projects") ? "active" : ""}
       Projects
-    %a.nav-link{:href=>"/folders/zero", :class => (current_page.data.title === "My folders") ? "active" : ""}
-      Folders
+    -# %a.nav-link{:href=>"/folders/zero", :class => (current_page.data.title === "My folders") ? "active" : ""}
+    -#   Folders
     %a.nav-link{:href=>"/products/archived", :class => (current_page.data.title === "Archived") ? "active" : ""}
       Archive
     %a.nav-link{:href=>"/products/team", :class => (current_page.data.title === "Team") ? "active" : ""}

@@ -1,0 +1,43 @@
+;;;
+
+"layout": "blank"
+
+;;;
+
+:css
+  body{
+    background:rgba(0,0,0,.5);
+  }
+
+#exportModal.modal.display-block{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header.no-border-bottom.no-padding-bottom
+        %a.close{:href=>"/product/settings/integrations"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
+        .padded.no-padding-top.text-center.margin-bottom
+          %img.margin-bottom{:src=>"/images/chathq-logo.png", :width=>"200px"}
+          %h1.no-margin-bottom.bold-font
+            Connect to ChatHQ
+        .margin-bottom
+          .row.justify-content-center
+            .col-12
+              %form
+                .form-group
+                  %label.full-width.medium-font
+                    .inline-block
+                      API token
+                    .inline-block.float-right
+                      %a{:href=>"#", :target=>"_blank"}
+                        Get your API token
+                        %i.material-icons.helper-icon
+                          launch
+
+                  %input.form-control.form-control-lg{:placeholder=>"Enter API token"}
+
+        .margin-bottom
+          %a.btn.btn-primary.btn-lg.btn-block{:href=>"/product/settings/integrations"}
+            Connect ChatHQ account
+
+

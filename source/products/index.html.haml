@@ -227,9 +227,10 @@
 					%p
 						Which account do you want to transfer this project to?
 					.margin-bottom
-						%form
-							.margin-bottom
-								%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Enter email..."}
+						%form.mb-2
+							%input.form-control.form-control-lg{:type=>"text", :placeholder=>"Enter email..."}
+						%h5.light-text-color
+							Make sure the email is correct. 
 			.modal-footer.no-border-top
 				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}
 					Cancel, do not transfer
@@ -276,20 +277,24 @@
 									%i.material-icons-outlined.icon-left
 										group
 									Another team
-						.mt-3
-							.list-group.select-list-group
-								%button.list-group-item.list-group-item-action{:type => "button"}
-									%i.material-icons-outlined.icon-left.align-middle.mr-2
-										group
-									Eternal contrast
-								%button.list-group-item.list-group-item-action{:type => "button"}
-									%i.material-icons-outlined.icon-left.align-middle.mr-2
-										folder
-									Folder 1
-								%button.list-group-item.list-group-item-action{:type => "button"}
-									%i.material-icons-outlined.icon-left.align-middle.mr-2
-										folder
-									Folder 2
+						-# .mt-2
+						-# 	.alert-container
+						-# 		.alert.alert-info
+						-# 			Project will be avaliable to all members of the selected workspace.
+						-# .mt-3
+						-# 	.list-group.select-list-group
+						-# 		%button.list-group-item.list-group-item-action{:type => "button"}
+						-# 			%i.material-icons-outlined.icon-left.align-middle.mr-2
+						-# 				group
+						-# 			Eternal contrast
+						-# 		%button.list-group-item.list-group-item-action{:type => "button"}
+						-# 			%i.material-icons-outlined.icon-left.align-middle.mr-2
+						-# 				folder
+						-# 			Folder 1
+						-# 		%button.list-group-item.list-group-item-action{:type => "button"}
+						-# 			%i.material-icons-outlined.icon-left.align-middle.mr-2
+						-# 				folder
+						-# 			Folder 2
 
 			.modal-footer.no-border-top
 				%button.btn.btn-link{:tyle=>"button", "data-dismiss" => "modal"}

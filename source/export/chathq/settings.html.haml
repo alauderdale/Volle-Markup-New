@@ -1,0 +1,71 @@
+;;;
+
+"layout": "blank"
+
+;;;
+
+:css
+  body{
+    background:rgba(0,0,0,.5);
+  }
+
+#exportModal.modal.display-block{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h2.padding-left
+          Integration settings
+        %a.close{ :href => "/product/settings/integrations"}
+          %span{"aria-hidden" => "true"} ×
+
+      .modal-body
+        .padded.no-padding-top.no-padding-bottom
+          .settings-section.mb-5
+            %p.bold-font
+              ChatHQ settings
+            %label.mb-0
+              Select channel
+            .dropdown.mt-2
+              %button.btn.btn-secondary.text-left.btn-block{:type=>"button", "data-toggle" => "dropdown"}
+                .d-inline
+                  \#name-of-channel
+                .d-inline.float-right
+                  %i.material-icons
+                    expand_more
+              .dropdown-menu.full-width
+                %button.dropdown-item.active{:type=>"button"} 
+                  \#name-of-channel
+                %button.dropdown-item{:type=>"button"} 
+                  \#another-channel
+                %button.dropdown-item{:type=>"button"} 
+                  \#another-channel
+                %button.dropdown-item{:type=>"button"} 
+                  \#another-channel
+          .settings-section
+            %p.bold-font
+              Notification settings
+            .margin-bottom
+              %label.mb-0
+                Send notifications to Chat HQ when
+              %form.mt-3
+                .form-check.custom-checkbox.no-padding-left
+                  %input#settingsCheck1.form-check-input{:name => "settingsOptions", :type => "checkbox", :value => "option1",:checked=>"checked"}
+                    %label.form-check-label{:for => "settingsCheck1"} 
+                      %p.half-margin-bottom
+                        Note is created
+                .form-check.custom-checkbox.no-padding-left
+                  %input#settingsCheck2.form-check-input{:name => "settingsOptions", :type => "checkbox", :value => "option1"}
+                    %label.form-check-label{:for => "settingsCheck2"} 
+                      %p.half-margin-bottom
+                        Another possible notification
+
+
+
+
+      .modal-footer.no-border-top
+        %a.btn.btn-link{:href => "/product/settings/integrations"}
+          Cancel
+        %a.btn.btn-primary{:href => "/product/settings/integrations"}
+          Save changes
+
+
