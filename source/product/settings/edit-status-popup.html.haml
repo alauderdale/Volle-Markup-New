@@ -1,0 +1,80 @@
+;;;
+
+"layout": "blank"
+
+;;;
+
+:css
+  body{
+    background:rgba(0,0,0,.5);
+  }
+
+#exportModal.modal.display-block{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document", :style=>"min-width:600px;"}
+    .modal-content
+      .modal-header
+        %h2.padding-left
+          Edit status
+        %a.close{ :href => "/product/review-board"}
+          %span{"aria-hidden" => "true"} ×
+
+      .modal-body
+        .padded.no-padding-top.no-padding-bottom
+          .settings-section.mb-5
+            .d-flex.align-items-center
+              %p.bold-font.mb-0.mr-2
+                Default status
+              %h4.light-text-color.mb-0
+                New feedback is added to this status
+            .draggable-container.mt-3
+              .draggable-item.d-flex.align-items-center.mb-3.disabled
+                %span.drag-handle
+                  %i.material-icons
+                    drag_indicator
+                .drag-content
+                  %input.form-control{:value=>"Needs review"}
+                  %button.btn-flat.btn-icon.btn.remove{:type=>"button"}
+                    %i.material-icons
+                      delete_outline
+                  .color-edit{:style=>"background-color:#0042FF;"}
+          .settings-section.mb-4
+            .draggable-container.mt-3
+              -4.times do
+                .draggable-item.d-flex.align-items-center.mb-3
+                  %span.drag-handle
+                    %i.material-icons
+                      drag_indicator
+                  .drag-content
+                    %input.form-control{:value=>"Needs review"}
+                    %button.btn-flat.btn-icon.btn.remove{:type=>"button"}
+                      %i.material-icons
+                        delete_outline
+                    .color-edit{:style=>"background-color:#B4BBC6;"}
+            %a{:href=>"#"}
+              + Add status
+          .settings-section.mb-2
+            .d-flex.align-items-center
+              %p.bold-font.mb-0.mr-2
+                Resolved status
+              %h4.light-text-color.mb-0
+                Resolved feedback is moved to this status
+            .draggable-container.mt-3
+              .draggable-item.d-flex.align-items-center.mb-3
+                %span.drag-handle
+                  %i.material-icons
+                    drag_indicator
+                .drag-content
+                  %input.form-control{:value=>"Needs review"}
+                  %button.btn-flat.btn-icon.btn.remove{:type=>"button"}
+                    %i.material-icons
+                      delete_outline
+                  .color-edit{:style=>"background-color:#26C164;"}
+           
+
+      .modal-footer.no-border-top
+        %a.btn.btn-link{:href => "/product/settings/integrations"}
+          Cancel
+        %a.btn.btn-primary{:href => "/product/settings/integrations"}
+          Save changes
+
+

@@ -20,12 +20,34 @@
 	display: block;
 }
 
+//exploring adding an animation to dropdown
+
+// @keyframes dropdown{
+
+// 	0% {
+// 	    opacity: 0;
+// 	    transform: translateY(-20px);
+// 	}
+
+//     100% {
+// 	    opacity: 1;
+// 	    transform: translateY(0);
+// 	}
+// }
+
+// .dropdown-action>div{
+// 	display: block;
+// 	animation:dropdown .2s;
+// }
+
 
 //default dropdown menu styling
 .dropdown-menu{
 	box-shadow:$box-shadow-elv-three;
 	border:none;
 	border-radius:$base-border-radius;
+
+
 	
 	.dropdown-item{
 		color:$text-color;
@@ -212,6 +234,17 @@
 			}
 		}
 	}
+}
+
+//statuses
+
+.status-option-color{
+display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin: 0 8px 1px 0;
+	border-radius: 50%;
+	background-color: #8090a0;
 }
 
 

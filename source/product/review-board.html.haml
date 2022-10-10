@@ -1,0 +1,59 @@
+;;;
+
+"layout": "product"
+
+;;;
+
+:css
+	body{
+		padding-top:0!important;
+	}
+
+.board-view-container
+	.board-view-inner
+		-4.times do
+			.board-view-column
+				.board-settings
+					%a{:href=>"/product/settings/edit-status-popup"}
+						%i.material-icons
+							settings
+				.board-name
+					.d-inline-block
+						.status-option-color{:style=>"background-color:#0042FF;"}
+					%h4.d-inline-block.bold-font.mb-0
+						To Do (3)
+				.scroller
+					-3.times do
+						.feedback-card
+							.feedback-date
+								%h5.extra-light-text-color.bold-font
+									Sept 22
+							.feedback-content
+								%h4
+									=lorem.words(10)
+							.feedback-meta.d-flex 
+								.mr-auto
+									.note-asignee-preview.d-inline
+										%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
+									.note-priority-preview.d-inline.half-margin-right
+										%img.align-middle.no-margin.align-middle{:src=>"/images/priority-none.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"None"}
+									.note-comment-preview.d-inline
+										%img.align-middle.d-inline{:src=>"/images/comment-icon.svg"}
+										%h6.d-inline
+											12
+								%div
+									%img{:src=>"/images/card-image-thumbnail.svg"}
+		.board-view-column
+			.board-settings
+				%a{:href=>"/product/settings/edit-status-popup"}
+					%i.material-icons
+						settings
+			.board-name
+				.d-inline-block
+					%img.mr-1{:src=>"/images/completed-lane-check.svg"}
+				%h4.d-inline-block.bold-font.mb-0
+					Completed (0)
+			.scroller.empty
+				
+						
+
