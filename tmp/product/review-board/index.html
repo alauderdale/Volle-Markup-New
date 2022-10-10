@@ -1,0 +1,912 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='Fast, easy feedback for your website' name='description'>
+<title>
+Volley | Fast, easy feedback for your website"
+</title>
+<meta content='Volley | A visual feedback tool for teams making websites' property='og:title'>
+<meta content='../../images/featured.png' property='og:image'>
+<!-- /google material icons -->
+<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/icon?family=Material+Icons+Outlined' rel='stylesheet'>
+<link href="../../stylesheets/style.css" rel="stylesheet" />
+<link href='../../images/favicon.ico' rel='shortcut icon'>
+<script src="../../bower_components/bootstrap/site/docs/4.3/assets/js/vendor/jquery-slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script><script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script><script src="../../javascripts/scripts.js"></script>
+
+<body class='product product_review-board product_review-board_index'>
+<nav class='navbar navbar-light bg-light fixed-bottom no-padding' id='bottom-bar'>
+<div class='container-fluid'>
+<div class='col'>
+<div class='d-inline-block'>
+<a class='navbar-brand padding-bottom padding-top' href='/products'>
+<div class='inline-block'>
+<i class='material-icons light-text-color' style='position:relative; top:3px; '>
+keyboard_arrow_left
+</i>
+</div>
+</a>
+</div>
+<div class='d-inline-block product-title'>
+<p class='no-margin-bottom product-name'>
+Project title with a really long name
+</p>
+<h6 class='product-date no-margin-bottom'>
+Created Oct 17, 2019
+</h6>
+</div>
+</div>
+<div class='col-6 col-sm-6 align-middle'>
+<div class='float-right'>
+<div class='avatars-list half-margin-right hidden-sm d-none d-md-inline-block'>
+<div class='avatar avatar-initial avatar-xs d-inline-block' data-placement='top' data-toggle='tooltip' title='John Doe (you)'>
+JD
+</div>
+<div class='avatar avatar-initial avatar-xs d-inline-block' data-placement='top' data-toggle='tooltip' title='John Doe (you)'>
+JD
+</div>
+<div class='avatar avatar-initial avatar-xs d-inline-block' data-placement='top' data-toggle='tooltip' title='John Doe (you)'>
+JD
+</div>
+<div class='avatar avatar-initial avatar-xs d-inline-block primary-bg' data-target='#shareModal' data-toggle='modal'>
++4
+</div>
+</div>
+<a class='btn btn-primary share-button d-inline-block' data-target='#shareModalGuest' data-toggle='modal' href='#'>
+Share
+</a>
+<a class='btn btn-secondary share-button d-inline-block' data-target='#exportModal' data-toggle='modal' href='#'>
+Export
+</a>
+<div class='d-none d-lg-inline-block'>
+<div class='dropup d-inline-block ml-2'>
+<a class='btn btn-secondary share-button d-inline-block dropdown-action' data-toggle='dropdown' type='button'>
+<div class='d-inline-block'>
+<i class='material-icons-outlined'>
+inbox
+</i>
+</div>
+<div class='d-inline-block'>
+Inbox view
+</div>
+<div class='d-inline-block float-right'>
+<i class='material-icons'>
+expand_more
+</i>
+</div>
+</a>
+<div class='dropdown-menu dropdown-menu-right'>
+<a class='dropdown-item active' href='/product/review'>
+Inbox view
+</a>
+<a class='dropdown-item' href='/product/review-board'>
+Board view
+</a>
+</div>
+<a class='btn btn-secondary btn-icon d-inline-block' href='/product/settings'>
+<i class='material-icons-outlined'>
+settings
+</i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='shareModalGuest' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header no-border-bottom no-padding-bottom'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top no-padding-bottom'>
+<h2 class='text-center'>
+Invite prople to this project
+</h2>
+<p class='light-text-color text-center'>
+Invite collaborators to work in this project
+</p>
+<div class='double-margin-bottom'>
+<div class='position-relative'>
+<input autofocus='' class='input-lg form-control form-control-lg' style='padding-left:170px; position:relative;' type='text'>
+<div class='chip' style='position:absolute; top:7px; left:7px;'>
+john@doe.com
+<div class='close'>
+<i class='material-icons'>
+cancel
+</i>
+</div>
+</div>
+</input>
+</div>
+</div>
+<div class='text-center'>
+<button class='btn btn-primary btn-lg' data-dismiss='modal' type='button'>
+Send invite
+</button>
+</div>
+<div class='double-margin-top'>
+<h5 class='light-text-color margin-bottom'>
+Who has access
+</h5>
+<div class='people-list'>
+<div class='media half-margin-top half-padding-top half-padding-bottom'>
+<div class='avatar avatar-initial avatar-xs half-margin-right'>
+JD
+</div>
+<div class='media-body'>
+<div class='row'>
+<div class='col-md-8'>
+<h4 class='bold-font no-margin-bottom'>
+Abel Carver
+</h4>
+<h5 class='light-font-name'>
+Owner •
+esmeralda-joyce@mac.com
+</h5>
+</div>
+<div class='col-md-4'>
+<button class='btn btn-secondary btn-sm disabled btn-block btn-label' data-toggle='tooltip' title='Owner can&#39;t be removed' type='button'>
+owner
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='media half-margin-top half-padding-top half-padding-bottom'>
+<div class='avatar avatar-initial avatar-xs half-margin-right'>
+JD
+</div>
+<div class='media-body'>
+<div class='row'>
+<div class='col-md-8'>
+<h4 class='bold-font no-margin-bottom'>
+Kendrick Diaz
+</h4>
+<h5 class='light-font-name'>
+Member •
+bianca_mcnamara@aol.com
+</h5>
+</div>
+<div class='col-md-4'>
+<button class='btn btn-secondary btn-label btn-sm disabled btn-block' data-toggle='tooltip' title='Team members can&#39;t be removed' type='button'>
+Team member
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='media half-margin-top half-padding-top half-padding-bottom'>
+<div class='avatar avatar-initial avatar-xs half-margin-right'>
+JD
+</div>
+<div class='media-body'>
+<div class='row'>
+<div class='col-md-8'>
+<h4 class='bold-font no-margin-bottom'>
+Dwayne Chung
+</h4>
+<h5 class='light-font-name'>
+Collaborator •
+maggie_lamb@fastmail.com
+</h5>
+</div>
+<div class='col-md-4'>
+<button class='btn btn-secondary btn-sm btn-block'>
+Remove
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='media half-margin-top half-padding-top half-padding-bottom'>
+<div class='avatar avatar-initial avatar-xs half-margin-right'>
+JD
+</div>
+<div class='media-body'>
+<div class='row'>
+<div class='col-md-8'>
+<h4 class='bold-font no-margin-bottom'>
+Dwayne Finch
+</h4>
+<h5 class='light-font-name'>
+Collaborator •
+virgil-graham@mac.com
+</h5>
+</div>
+<div class='col-md-4'>
+<button class='btn btn-secondary btn-sm btn-block'>
+Leave project
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='media half-margin-top half-padding-top half-padding-bottom'>
+<div class='avatar avatar-initial avatar-xs half-margin-right'>
+JD
+</div>
+<div class='media-body'>
+<div class='row'>
+<div class='col-md-8'>
+<h4 class='bold-font no-margin-bottom extra-light-text-color'>
+Penny Joseph
+(invited)
+</h4>
+<h5 class='light-font-name'>
+Invited •
+pennymcallister@live.com
+</h5>
+</div>
+<div class='col-md-4'>
+<button class='btn btn-secondary btn-sm btn-block' data-toggle='dropdown' type='button'>
+•••
+</button>
+<div class='dropdown-menu dropdown-menu-right'>
+<button class='dropdown-item' type='button'>
+Resend invite
+</button>
+<button class='dropdown-item delete-comment' onclick='$(&#39;.comment-list-confirm-overlay&#39;).addClass(&#39;visible&#39;).removeClass(&#39;invisible&#39;);' type='button'>
+Remove
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='modal-footer no-border-top'></div>
+</div>
+</div>
+</div>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='exportModal' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header no-border-bottom no-padding-bottom'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top'>
+<h2 class='no-margin-bottom'>
+Export Notes
+</h2>
+<div class='double-margin-top'>
+<h5 class='bold-font'>
+Active
+</h5>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col-5'>
+<img class='max-width' src='../images/pdf-icon.svg' width='70px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<a class='btn btn-primary' href='#'>
+Export
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col-5'>
+<img class='max-width' src='../images/trello-logo.png' width='100px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<div class='dropdown'>
+<button class='btn btn-flat btn-icon' data-toggle='dropdown' type='button'>
+<i class='material-icons'>
+more_vert
+</i>
+</button>
+<div class='dropdown-menu dropdown-menu-right'>
+<button class='dropdown-item' type='button'>
+Disconnect
+</button>
+</div>
+<a class='btn btn-primary' href='/export'>
+Export
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='double-margin-top'>
+<h5 class='bold-font'>
+Not configured
+</h5>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col'>
+<img src='../images/asana-logo.png' width='100px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<a class='btn btn-secondary' href='#'>
+Configure
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col'>
+<img src='../images/jira-software-logo.svg' width='150px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<a class='btn btn-secondary' href='/export/jira/connect'>
+Configure
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal' id='exportModalLocked' role='dialog' tabindex='-1'>
+<div class='modal-dialog' role='document'>
+<div class='modal-content'>
+<div class='modal-header no-border-bottom no-padding-bottom'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<div class='padded no-padding-top'>
+<h2 class='no-margin-bottom'>
+Export Notes
+</h2>
+<div class='double-margin-top'>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col-5'>
+<img class='max-width' src='../images/trello-logo.png' width='100px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<a class='btn btn-link' href='/billing/trial-expired'>
+Upgrade to use
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='double-margin-top'>
+<div class='card half-margin-bottom'>
+<div class='card-body'>
+<div class='row align-items-center'>
+<div class='col'>
+<img src='../images/asana-logo.png' width='100px'>
+</div>
+<div class='col'>
+<div class='float-right'>
+<a class='btn btn-link' href='/billing/trial-expired'>
+Upgrade to use
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- end menu -->
+<div class='main'>
+<style>
+  body{
+  	padding-top:0!important;
+  }
+</style>
+<div class='board-view-container'>
+<div class='board-view-inner'>
+<div class='board-view-column'>
+<div class='board-settings'>
+<a href='/product/settings/edit-status-popup'>
+<i class='material-icons'>
+settings
+</i>
+</a>
+</div>
+<div class='board-name'>
+<div class='d-inline-block'>
+<div class='status-option-color' style='background-color:#0042FF;'></div>
+</div>
+<h4 class='d-inline-block bold-font mb-0'>
+To Do (3)
+</h4>
+</div>
+<div class='scroller'>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+est atque maxime aut veritatis exercitationem deleniti odit fugit delectus
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+earum est ullam cumque officia quo consequatur molestiae neque ullam
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+laborum vitae qui ad aliquam dolorem natus accusamus provident sed
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='board-view-column'>
+<div class='board-settings'>
+<a href='/product/settings/edit-status-popup'>
+<i class='material-icons'>
+settings
+</i>
+</a>
+</div>
+<div class='board-name'>
+<div class='d-inline-block'>
+<div class='status-option-color' style='background-color:#0042FF;'></div>
+</div>
+<h4 class='d-inline-block bold-font mb-0'>
+To Do (3)
+</h4>
+</div>
+<div class='scroller'>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+odit doloribus est ex sed quis pariatur aspernatur debitis id
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+numquam laboriosam sunt earum nisi vel veniam qui autem impedit
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+consectetur suscipit fugit esse ullam vel quae qui fugiat tenetur
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='board-view-column'>
+<div class='board-settings'>
+<a href='/product/settings/edit-status-popup'>
+<i class='material-icons'>
+settings
+</i>
+</a>
+</div>
+<div class='board-name'>
+<div class='d-inline-block'>
+<div class='status-option-color' style='background-color:#0042FF;'></div>
+</div>
+<h4 class='d-inline-block bold-font mb-0'>
+To Do (3)
+</h4>
+</div>
+<div class='scroller'>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+culpa cumque et est rerum molestiae optio consequatur est neque
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+dolor aperiam itaque sequi in facilis voluptatibus incidunt voluptatem hic
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+fugit voluptatem et qui officiis a et alias iusto sit
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='board-view-column'>
+<div class='board-settings'>
+<a href='/product/settings/edit-status-popup'>
+<i class='material-icons'>
+settings
+</i>
+</a>
+</div>
+<div class='board-name'>
+<div class='d-inline-block'>
+<div class='status-option-color' style='background-color:#0042FF;'></div>
+</div>
+<h4 class='d-inline-block bold-font mb-0'>
+To Do (3)
+</h4>
+</div>
+<div class='scroller'>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+aspernatur nihil maxime explicabo in sint architecto sed recusandae quibusdam
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+consequatur quia non et minus similique corporis voluptas vero quia
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+<div class='feedback-card'>
+<div class='feedback-date'>
+<h5 class='extra-light-text-color bold-font'>
+Sept 22
+</h5>
+</div>
+<div class='feedback-content'>
+<h4>
+delectus ducimus quia adipisci omnis nisi totam dolorum eaque adipisci
+</h4>
+</div>
+<div class='feedback-meta d-flex'>
+<div class='mr-auto'>
+<div class='note-asignee-preview d-inline'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/avatar-unassigned.svg' title='Unassigned' width='20px'>
+</div>
+<div class='note-priority-preview d-inline half-margin-right'>
+<img class='align-middle no-margin align-middle' data-toggle='tooltip' src='../../images/priority-none.svg' title='None' width='16px'>
+</div>
+<div class='note-comment-preview d-inline'>
+<img class='align-middle d-inline' src='../../images/comment-icon.svg'>
+<h6 class='d-inline'>
+12
+</h6>
+</div>
+</div>
+<div>
+<img src='../../images/card-image-thumbnail.svg'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='board-view-column'>
+<div class='board-settings'>
+<a href='/product/settings/edit-status-popup'>
+<i class='material-icons'>
+settings
+</i>
+</a>
+</div>
+<div class='board-name'>
+<div class='d-inline-block'>
+<img class='mr-1' src='../../images/completed-lane-check.svg'>
+</div>
+<h4 class='d-inline-block bold-font mb-0'>
+Completed (0)
+</h4>
+</div>
+<div class='scroller empty'></div>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</head>
+</html>

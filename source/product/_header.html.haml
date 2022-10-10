@@ -23,9 +23,25 @@
           Share
         %a.btn.btn-secondary.share-button.d-inline-block{:href=>"#", "data-toggle"=>"modal", "data-target"=>"#exportModal"}
           Export
-        %a.btn.btn-secondary.btn-icon.d-inline-block{:href=>"/product/settings"}
-          %i.material-icons-outlined
-            settings
+        .d-none.d-lg-inline-block
+          .dropup.d-inline-block.ml-2
+            %a.btn.btn-secondary.share-button.d-inline-block.dropdown-action{:type=>"button", "data-toggle" => "dropdown"}
+              .d-inline-block
+                %i.material-icons-outlined
+                  inbox
+              .d-inline-block
+                Inbox view
+              .d-inline-block.float-right
+                %i.material-icons
+                  expand_more
+            .dropdown-menu.dropdown-menu-right
+              %a.dropdown-item.active{:href=>"/product/review"} 
+                Inbox view
+              %a.dropdown-item{:href=>"/product/review-board"} 
+                Board view
+            %a.btn.btn-secondary.btn-icon.d-inline-block{:href=>"/product/settings"}
+              %i.material-icons-outlined
+                settings
         
 
 

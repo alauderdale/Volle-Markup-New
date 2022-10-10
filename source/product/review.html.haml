@@ -89,13 +89,14 @@
 								3
 						%h5
 							=lorem.words(10)
-						.note-status-preview.d-inline
-							%i.material-icons.half-margin-right.align-middle{"data-toggle"=>"tooltip", :title=>"Needs review"}
-								remove_red_eye
 						.note-asignee-preview.d-inline
 							%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
 						.note-priority-preview.d-inline.half-margin-right
 							%img.align-middle.no-margin.align-middle{:src=>"/images/priority-urgent.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"Urgent"}
+						.note-comment-preview.d-inline
+							%img.align-middle.d-inline{:src=>"/images/comment-icon.svg"}
+							%h6.d-inline
+								12
 
 						
 
@@ -111,14 +112,18 @@
 							=lorem.first_name
 						%h5
 							=lorem.words(10)
-						.note-status-preview.d-inline
-							%i.material-icons.half-margin-right.align-middle{"data-toggle"=>"tooltip", :title=>"Completed"}
-								check_box
+						-# .note-status-preview.d-inline
+						-# 	%i.material-icons.half-margin-right.align-middle{"data-toggle"=>"tooltip", :title=>"Completed"}
+						-# 		check_box
 						.note-asignee-preview.d-inline-block
 							.d-inline-block.avatar.avatar-initial.avatar-micro.half-margin-right.align-middle{ "data-toggle"=>"tooltip", :title=>"John Doe"}
 								JD
 						.note-priority-preview.d-inline.half-margin-right
-							%img.align-middle.no-margin.align-middle{:src=>"/images/priority-high.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"high"}
+							%img.align-middle.no-margin.align-middle{:src=>"/images/priority-urgent.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"Urgent"}
+						.note-comment-preview.d-inline
+							%img.align-middle.d-inline{:src=>"/images/comment-icon.svg"}
+							%h6.d-inline
+								12
 
 
 			- 30.times do
@@ -134,13 +139,14 @@
 								=lorem.first_name
 							%h5
 								=lorem.words(10)
-							.note-status-preview.d-inline.half-margin-right
-								%i.material-icons-outlined.align-middle{"data-toggle"=>"tooltip", :title=>"To Do"}
-									crop_free
 							.note-asignee-preview.d-inline
 								%img.align-middle.no-margin.align-middle{:src=>"/images/avatar-unassigned.svg", :width=>"20px", "data-toggle"=>"tooltip", :title=>"Unassigned"}
 							.note-priority-preview.d-inline.half-margin-right
 								%img.align-middle.no-margin.align-middle{:src=>"/images/priority-none.svg", :width=>"16px", "data-toggle"=>"tooltip", :title=>"Nonw"}
+							.note-comment-preview.d-inline
+							%img.align-middle.d-inline{:src=>"/images/comment-icon.svg"}
+							%h6.d-inline
+								0
 								
 							
 

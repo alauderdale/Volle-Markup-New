@@ -171,3 +171,65 @@ img{
     left:8px;
   }
 }
+
+
+//dragable
+
+.draggable-container{
+  position:relative;
+  margin-left:-20px;
+}
+
+
+.draggable-item{
+    &.disabled{
+      .drag-handle{
+        opacity: 0;
+      }
+    }
+  .drag-handle{
+    position: relative;
+    display: block;
+    cursor: move;
+    height:18px;
+      i{
+        font-size:18px;
+        line-height: 1;
+        color:$extra-light-text-color;
+      }
+  }
+  .drag-content{
+    position: relative;
+    flex: 1 1 auto;
+    // border: 1px solid $border-color;
+    // border-radius: 6px;
+    // background-color: rgba(0,0,0,.02);
+    input{
+      // background: transparent;
+      // border:none;
+      background-color: rgba(0,0,0,.02);
+    }
+    .remove{
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      color: $extra-light-text-color;
+      border:none;
+      background:transparent;
+      &:hover{
+        background:transparent;
+      }
+    }
+    .color-edit{
+      position: absolute;
+      top: 9px;
+      right: 42px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      background: $link-color;
+      box-shadow:0 0 0 1px inset rgba(0,0,0,.5);
+    }
+  }
+}
