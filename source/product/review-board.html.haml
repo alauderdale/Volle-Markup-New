@@ -9,8 +9,39 @@
 		padding-top:0!important;
 	}
 
+
+
+
+.review-header
+	.container-fluid	
+		.row.align-items-center
+			.col
+				.d-flex
+					.mr-auto
+						%h3.medium-font.d-inline.mr-4.mb-0.align-middle
+							Status board
+						%h4.medium-font.d-inline.mb-0.align-middle
+							23 notes
+					%div
+						.btn-group
+							%button.btn.btn-secondary.btn-icon.filter-button.dropdown-action{:type=>"button", "data-toggle"=>"dropdown"}
+								%span.light-text-color
+									.material-icons
+										filter_list
+									1
+							.dropdown-menu.max-height-dropdown.prevent-dd-close-on-click{:style=>"min-width:250px;"}		
+								=partial"/product/filter-menu"
+							
+							%a.btn.btn-secondary.btn-icon.filter-button{:href=>"#"}
+								%span.light-text-color
+									.material-icons
+										clear
+
+
+
 .board-view-container
 	.board-view-inner
+
 		-4.times do
 			.board-view-column
 				.board-settings
